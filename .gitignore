@@ -1,0 +1,14 @@
+CLAUDE.md
+NOTES.md
+notes/
+.claude/
+.env
+.env.*
+*.key
+*.pem
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+slides/pitch.html
