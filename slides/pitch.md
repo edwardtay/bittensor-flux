@@ -220,27 +220,45 @@ style: |
   .vs .head { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 6px; }
   .vs .body { font-size: 0.92em; line-height: 1.45; }
   header, footer { color: #999; font-size: 0.65em; letter-spacing: 0.05em; }
+  .zh {
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Inter', sans-serif;
+    color: #0a4d68;
+    font-weight: 600;
+  }
+  .en-sub {
+    color: #888;
+    font-size: 0.7em;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-top: 2px;
+    display: block;
+  }
+  h2 .zh-h { display: block; font-family: 'PingFang SC', 'Hiragino Sans GB', sans-serif; line-height: 1.2; }
+  h2 .en-h { display: block; font-size: 0.62em; color: #888; font-weight: 500; letter-spacing: 0.02em; margin-top: 2px; }
 ---
 
 <!-- _class: lead -->
 
 # Flux
 
-## Real-time energy intelligence on Bittensor
+## 基于 Bittensor 的实时能源情报
+### Real-time energy intelligence on Bittensor
 
 <br>
 
-A market for forecasts. Many competing models. One unarguable source of truth.
+<span class="zh" style="font-size:1.1em;">一个预测市场。多个模型竞争。一个无可争议的真相。</span>
+<span class="en-sub" style="font-size:0.9em;">A market for forecasts. Many competing models. One unarguable source of truth.</span>
 
 ---
 
-## Energy is becoming the world's focus
+## <span class="zh-h">能源正成为世界的焦点</span><span class="en-h">Energy is becoming the world's focus</span>
 
-<div class="kicker">The problem</div>
+<div class="kicker">问题 · The problem</div>
 
-<p class="huge">By 2030, data centers will draw<br>3% of the world's electricity.</p>
+<p class="huge">到 2030 年,数据中心将消耗<br>全球 3% 的电力。</p>
+<p style="font-size:0.85em; color:#888; text-align:center; margin-top:-12px;">By 2030, data centers will draw 3% of the world's electricity.</p>
 
-<p style="font-size:1.05em; color:#555; margin-top:-4px;">AI is the largest energy story of our lifetime. Demand is exploding. Supply is fragile. <strong style="color:#0a4d68;">Whoever sees the next price first wins.</strong></p>
+<p style="font-size:1em; color:#555; margin-top:8px;"><span class="zh">人工智能是我们这一代最大的能源故事。需求爆炸,供给脆弱。</span><strong style="color:#0a4d68;">谁先看到下一个价格,谁就赢。</strong></p>
 
 <div class="cols" style="grid-template-columns: 1.4fr 1fr; align-items: center;">
 <div>
@@ -325,11 +343,12 @@ A market for forecasts. Many competing models. One unarguable source of truth.
 
 ---
 
-## Geopolitics rewires the grid
+## <span class="zh-h">地缘政治重塑电网</span><span class="en-h">Geopolitics rewires the grid</span>
 
-<div class="kicker">The other half</div>
+<div class="kicker">供给端 · The other half</div>
 
-Demand is one side. Supply is the other — and supply runs through chokepoints.
+<span class="zh">需求是一面。供给是另一面 —— 而供给穿过一个个咽喉要道。</span>
+<span class="en-sub">Demand is one side. Supply is the other, and supply runs through chokepoints.</span>
 
 <div class="cols">
 <div class="card">
@@ -358,26 +377,27 @@ Demand is one side. Supply is the other — and supply runs through chokepoints.
 
 ---
 
-## But forecasts are stuck in the past
+## <span class="zh-h">但预测还停留在过去</span><span class="en-h">But forecasts are stuck in the past</span>
 
 <div class="kicker">The gap</div>
 
 <div class="vs">
 <div class="a">
-<div class="head">Today's intelligence</div>
+<div class="head">今天的能源情报 · Today</div>
 <div class="body">
-One firm. One model. One opinion.<br>
-PDF reports. Quarterly.<br>
-<strong>$300k per seat.</strong>
+一家公司。一个模型。一种观点。<br>
+季度报告。<strong>30 万美元一个席位。</strong>
+<div style="font-size:0.8em; color:#999; margin-top:6px;">One firm. One model. One opinion. Quarterly reports. $300k per seat.</div>
 </div>
 </div>
 <div class="mid">VS</div>
 <div class="b">
-<div class="head">What the market does</div>
+<div class="head">市场的现实 · The market</div>
 <div class="body">
-Prices move <strong>every 5 minutes</strong>.<br>
-Traders fly blind.<br>
-Most volatile decade in 50 years.
+价格每 <strong>5 分钟</strong> 变动一次。<br>
+交易员盲飞。<br>
+50 年来最动荡的十年。
+<div style="font-size:0.8em; color:#b3d4dc; margin-top:6px;">Prices move every 5 min. Traders fly blind.</div>
 </div>
 </div>
 </div>
@@ -386,11 +406,11 @@ Most volatile decade in 50 years.
 
 ---
 
-## That's what Flux is
+## <span class="zh-h">这就是 Flux</span><span class="en-h">That's what Flux is</span>
 
-<div class="kicker">The idea</div>
+<div class="kicker">解决方案 · The idea</div>
 
-A **marketplace for energy forecasts** built on Bittensor.
+<span class="zh" style="font-size:1.1em;">一个基于 Bittensor 的能源预测市场。</span> <span style="color:#888; font-size:0.95em;">A marketplace for energy forecasts.</span>
 
 <div class="cols">
 <div class="card">
@@ -417,36 +437,36 @@ A **marketplace for energy forecasts** built on Bittensor.
 
 ---
 
-## Who pays
+## <span class="zh-h">客户是谁</span><span class="en-h">Who pays</span>
 
 <div class="cols-3">
 <div class="card-dark">
-<div class="label">Crypto-quant</div>
+<div class="label">加密量化 · Crypto-quant</div>
 <div class="value" style="font-size:1.4em;">$60k</div>
 <span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
 <div class="note" style="color:#a8c8d8; margin-top:8px;">On-chain energy desks · RWA protocols · crypto-native funds</div>
 </div>
 <div class="card-dark">
-<div class="label">Trading desk</div>
+<div class="label">交易部门 · Trading desk</div>
 <div class="value" style="font-size:1.4em;">$300k</div>
 <span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
 <div class="note" style="color:#a8c8d8; margin-top:8px;">Mid-tier ERCOT/CAISO traders · NA + EU</div>
 </div>
 <div class="card-dark">
-<div class="label">Enterprise</div>
+<div class="label">企业客户 · Enterprise</div>
 <div class="value" style="font-size:1.4em;">$1.2M+</div>
 <span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
 <div class="note" style="color:#a8c8d8; margin-top:8px;">Utilities · IPPs · data-center operators</div>
 </div>
 </div>
 
-<p class="big" style="text-align:center; margin-top:0.6em;">Three-year ARR target: $15–30M</p>
+<p class="big" style="text-align:center; margin-top:0.6em;">三年目标年度经常性收入:1500 万 ~ 3000 万美元<br><span style="font-size:0.55em; color:#888; font-weight:400;">Three-year ARR target: $15–30M</span></p>
 
 <div class="sub" style="text-align:center;">Wedge: crypto-native energy desks underserved by Bloomberg (too expensive) and Modo (valuation-focused). Funds the first 18 months alone.</div>
 
 ---
 
-## Why this works on Bittensor
+## <span class="zh-h">为什么选 Bittensor</span><span class="en-h">Why this works on Bittensor</span>
 
 <div class="kicker">The fit</div>
 
@@ -475,7 +495,7 @@ Validators sell APIs. Subnet captures emissions. Stakers capture both.
 
 ---
 
-## v1 — day-ahead power prices
+## <span class="zh-h">第一版 — 日前电价</span><span class="en-h">v1 — day-ahead power prices</span>
 
 <div class="kicker">Where we start</div>
 
@@ -569,7 +589,7 @@ One market. One product. Prove the mechanism. Start with the grid doubling faste
 
 ---
 
-## What miners do
+## <span class="zh-h">矿工做什么</span><span class="en-h">What miners do</span>
 
 <div class="kicker">The supply side</div>
 
@@ -600,7 +620,7 @@ Compute + data-feed fees self-bankrupt fakes.
 
 ---
 
-## What validators do
+## <span class="zh-h">验证者做什么</span><span class="en-h">What validators do</span>
 
 <div class="kicker">The scoring side</div>
 
@@ -629,7 +649,7 @@ Compute + data-feed fees self-bankrupt fakes.
 
 ---
 
-## What a scoring round looks like
+## <span class="zh-h">一轮打分长什么样</span><span class="en-h">What a scoring round looks like</span>
 
 <div class="kicker">Sample · illustrative data</div>
 
@@ -667,7 +687,7 @@ table { font-size: 0.72em; }
 td, th { padding: 5px 10px; }
 </style>
 
-## Eight attacks, eight defenses
+## <span class="zh-h">八种攻击,八种防御</span><span class="en-h">Eight attacks, eight defenses</span>
 
 | Attack vector | Defense | Parameter |
 |---|---|---|
@@ -684,7 +704,7 @@ Every attack maps to one specific hyperparameter or capital commitment. **No hum
 
 ---
 
-## How the system fits together
+## <span class="zh-h">系统闭环</span><span class="en-h">How the system fits together</span>
 
 <div class="flow">
 <div class="flow-box">
@@ -718,7 +738,7 @@ Public grid data. No human DAO. No LLM judge. No off-chain attestation.
 
 ---
 
-## Where we are today
+## <span class="zh-h">当前进度</span><span class="en-h">Where we are today</span>
 
 <div class="kicker">Status</div>
 
@@ -759,7 +779,7 @@ Public grid data. No human DAO. No LLM judge. No off-chain attestation.
 
 ---
 
-## Milestones
+## <span class="zh-h">路线图</span><span class="en-h">Milestones</span>
 
 <div class="kicker">Next 18 months</div>
 
@@ -812,7 +832,7 @@ Public grid data. No human DAO. No LLM judge. No off-chain attestation.
 
 ---
 
-## Subnet creation
+## <span class="zh-h">子网部署</span><span class="en-h">Subnet creation</span>
 
 ```bash
 btcli subnet create --network finney --wallet.name flux
@@ -831,7 +851,7 @@ Every value above defends a named attack. Spec frozen against Yuma v3 + Taoflow 
 
 ---
 
-## The competitive landscape
+## <span class="zh-h">竞争格局</span><span class="en-h">The competitive landscape</span>
 
 <div class="kicker">Where Flux sits</div>
 
@@ -898,7 +918,8 @@ Every value above defends a named attack. Spec frozen against Yuma v3 + Taoflow 
 
 # Flux
 
-## Real-time energy intelligence, Bittensor-native
+## 实时能源情报,原生于 Bittensor
+### Real-time energy intelligence, Bittensor-native
 
 <br>
 
