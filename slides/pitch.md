@@ -7,8 +7,8 @@ header: 'Flux'
 footer: 'github.com/edwardtay/bittensor-flux'
 style: |
   section {
-    font-size: 22px;
-    padding: 55px 75px;
+    font-size: 21px;
+    padding: 50px 70px;
     background: #fbfbfa;
     color: #1a1a1a;
     font-family: -apple-system, "Inter", system-ui, sans-serif;
@@ -26,7 +26,7 @@ style: |
     letter-spacing: -0.015em;
     border-bottom: 2px solid #0a4d68;
     padding-bottom: 6px;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.5em;
   }
   h3 { color: #088395; font-weight: 500; }
   strong { color: #0a4d68; }
@@ -42,8 +42,8 @@ style: |
     padding: 8px 12px;
     text-align: left;
     font-weight: 600;
-    font-size: 0.88em;
-    letter-spacing: 0.02em;
+    font-size: 0.85em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
   }
   td { padding: 7px 12px; border-bottom: 1px solid #e4e4e0; }
@@ -59,8 +59,8 @@ style: |
   pre {
     background: #1a1f24;
     color: #d8e0e8;
-    font-size: 0.72em;
-    padding: 16px 20px;
+    font-size: 0.7em;
+    padding: 14px 18px;
     border-radius: 5px;
     line-height: 1.45;
     border-left: 3px solid #088395;
@@ -73,7 +73,7 @@ style: |
     margin: 1em 0;
     font-style: normal;
   }
-  ul { line-height: 1.6; }
+  ul { line-height: 1.55; }
   ul li::marker { color: #088395; }
   hr { border: 0; border-top: 1px solid #d8d8d4; margin: 1.2em 0; }
   section.lead {
@@ -94,11 +94,11 @@ style: |
   }
   .kicker {
     color: #088395;
-    font-size: 0.75em;
+    font-size: 0.7em;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin-bottom: -0.4em;
+    margin-bottom: 0.2em;
   }
   .big {
     font-size: 1.8em;
@@ -109,18 +109,116 @@ style: |
     letter-spacing: -0.02em;
   }
   .huge {
-    font-size: 2.8em;
+    font-size: 2.5em;
     line-height: 1.1;
     color: #0a4d68;
     font-weight: 800;
     letter-spacing: -0.03em;
-    margin: 0.2em 0;
+    margin: 0.15em 0;
   }
-  .sub {
-    color: #555;
-    font-size: 0.95em;
-    line-height: 1.5;
+  .sub { color: #555; font-size: 0.95em; line-height: 1.5; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 0.6em 0; }
+  .cols-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin: 0.6em 0; }
+  .card {
+    background: white;
+    border: 1px solid #d8e0e0;
+    border-left: 3px solid #088395;
+    border-radius: 4px;
+    padding: 14px 18px;
   }
+  .card-dark {
+    background: #0a4d68;
+    color: white;
+    border-radius: 4px;
+    padding: 14px 18px;
+  }
+  .card-dark .label { color: #88c5d4; font-size: 0.7em; letter-spacing: 0.1em; text-transform: uppercase; }
+  .card-dark .value { font-size: 1.8em; font-weight: 700; line-height: 1.1; margin: 0.2em 0; }
+  .card .label { color: #088395; font-size: 0.7em; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .icon { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+  .icon-lg { width: 28px; height: 28px; stroke: #0a4d68; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .flow-box .icon-lg { margin: 0 auto 6px; display: block; }
+  .card .value { font-size: 1.6em; font-weight: 700; color: #0a4d68; line-height: 1.1; margin: 0.2em 0; }
+  .card .note { color: #666; font-size: 0.85em; }
+  .pill {
+    display: inline-block;
+    background: #ecefe8;
+    color: #0a4d68;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.78em;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin: 0 4px 4px 0;
+  }
+  .pill-accent { background: #0a4d68; color: white; }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin: 10px 0;
+    padding: 10px 12px;
+    background: white;
+    border: 1px solid #e0e4e0;
+    border-radius: 4px;
+  }
+  .step-num {
+    background: #0a4d68;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9em;
+    flex-shrink: 0;
+  }
+  .step-body { font-size: 0.92em; }
+  .step-body strong { display: block; margin-bottom: 2px; }
+  .flow {
+    display: grid;
+    grid-template-columns: 1fr 30px 1fr 30px 1fr;
+    align-items: center;
+    gap: 8px;
+    margin: 1em 0;
+  }
+  .flow-box {
+    background: white;
+    border: 2px solid #0a4d68;
+    border-radius: 6px;
+    padding: 16px 12px;
+    text-align: center;
+  }
+  .flow-box .t { font-weight: 700; color: #0a4d68; font-size: 1em; margin-bottom: 4px; }
+  .flow-box .d { font-size: 0.78em; color: #555; line-height: 1.3; }
+  .flow-arrow { font-size: 1.6em; color: #088395; text-align: center; }
+  .vs {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    gap: 0;
+    align-items: stretch;
+    margin: 0.5em 0;
+  }
+  .vs > .a, .vs > .b {
+    padding: 16px 20px;
+    border-radius: 4px;
+  }
+  .vs > .a { background: #f3f5f3; border: 1px solid #d8d8d4; }
+  .vs > .b { background: #0a4d68; color: white; }
+  .vs > .b strong { color: white; }
+  .vs > .mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #088395;
+    font-weight: 700;
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+  }
+  .vs .head { font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 6px; }
+  .vs .body { font-size: 0.92em; line-height: 1.45; }
   header, footer { color: #999; font-size: 0.65em; letter-spacing: 0.05em; }
 ---
 
@@ -140,13 +238,83 @@ A market for forecasts. Many competing models. One unarguable source of truth.
 
 <div class="kicker">The setup</div>
 
-<p class="huge">Global electricity demand grew more in 2024 than in any year since WWII.</p>
+<p class="huge">By 2030, AI data centers will use<br>more electricity than Japan.</p>
 
-AI data centers, EVs, electrified industry, and cooling load are compounding at once. Every major grid — China, US, Europe, India — is repricing electricity in real time.
+<div class="cols" style="grid-template-columns: 1.4fr 1fr; align-items: center;">
+<div>
 
-<br>
+<svg viewBox="0 0 460 220" style="width:100%; height:auto;">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a4d68" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#088395" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <!-- axes -->
+  <line x1="50" y1="180" x2="445" y2="180" stroke="#aab" stroke-width="1"/>
+  <line x1="50" y1="20" x2="50" y2="180" stroke="#aab" stroke-width="1"/>
+  <!-- gridlines + y labels -->
+  <line x1="50" y1="40" x2="445" y2="40" stroke="#e0e4e0"/>
+  <line x1="50" y1="80" x2="445" y2="80" stroke="#e0e4e0"/>
+  <line x1="50" y1="120" x2="445" y2="120" stroke="#e0e4e0"/>
+  <line x1="50" y1="160" x2="445" y2="160" stroke="#e0e4e0"/>
+  <text x="44" y="44" text-anchor="end" font-size="10" fill="#666">1000</text>
+  <text x="44" y="84" text-anchor="end" font-size="10" fill="#666">750</text>
+  <text x="44" y="124" text-anchor="end" font-size="10" fill="#666">500</text>
+  <text x="44" y="164" text-anchor="end" font-size="10" fill="#666">250</text>
+  <text x="44" y="184" text-anchor="end" font-size="10" fill="#666">0</text>
+  <text x="14" y="100" text-anchor="middle" font-size="10" fill="#0a4d68" font-weight="600" transform="rotate(-90 14 100)">TWh / year</text>
+  <!-- bars: 2020=290, 2022=350, 2024=415, 2026=570, 2028=720, 2030=945 -->
+  <!-- scale: 945 TWh -> y=22; 0 -> y=180; per TWh = 158/945 = 0.167 -->
+  <g fill="url(#g1)">
+    <rect x="68"  y="133.6" width="44" height="46.4"/>
+    <rect x="130" y="121.5" width="44" height="58.5"/>
+    <rect x="192" y="110.6" width="44" height="69.4"/>
+    <rect x="254" y="84.7"  width="44" height="95.3"/>
+    <rect x="316" y="59.7"  width="44" height="120.3"/>
+    <rect x="378" y="22.4"  width="44" height="157.6"/>
+  </g>
+  <!-- value labels -->
+  <g font-size="10" fill="#0a4d68" text-anchor="middle" font-weight="600">
+    <text x="90"  y="128">290</text>
+    <text x="152" y="116">350</text>
+    <text x="214" y="105">415</text>
+    <text x="276" y="79">570</text>
+    <text x="338" y="55">720</text>
+    <text x="400" y="18">945</text>
+  </g>
+  <!-- x labels -->
+  <g font-size="10" fill="#666" text-anchor="middle">
+    <text x="90"  y="195">2020</text>
+    <text x="152" y="195">2022</text>
+    <text x="214" y="195">2024</text>
+    <text x="276" y="195">2026</text>
+    <text x="338" y="195">2028</text>
+    <text x="400" y="195">2030</text>
+  </g>
+  <!-- annotation -->
+  <line x1="400" y1="22" x2="400" y2="14" stroke="#088395" stroke-width="1"/>
+  <text x="395" y="11" font-size="9.5" fill="#088395" font-weight="600" text-anchor="end">~Japan total</text>
+</svg>
 
-> The people who can **see the next price before everyone else** make fortunes. The people who can't go bankrupt.
+<div class="sub" style="font-size:0.7em; text-align:right; margin-top:-4px;">Source: IEA, <em>Energy and AI</em>, April 2025</div>
+</div>
+<div>
+
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>Data-center load</div>
+<div class="value">2×</div>
+<div class="note">by 2030</div>
+</div>
+<div class="card" style="margin-top:10px;">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>Global power demand</div>
+<div class="value">+4% / yr</div>
+<div class="note">through 2027 (IEA)</div>
+</div>
+</div>
+</div>
+
+> See the next price first. Win. Miss it. Go bankrupt.
 
 ---
 
@@ -154,17 +322,27 @@ AI data centers, EVs, electrified industry, and cooling load are compounding at 
 
 <div class="kicker">The gap</div>
 
-Today's energy intelligence comes from a handful of consulting firms selling **PDF reports updated once a quarter**. One firm, one model, one opinion — sold for hundreds of thousands of dollars per seat.
+<div class="vs">
+<div class="a">
+<div class="head">Today's intelligence</div>
+<div class="body">
+One firm. One model. One opinion.<br>
+PDF reports. Quarterly.<br>
+<strong>$300k per seat.</strong>
+</div>
+</div>
+<div class="mid">VS</div>
+<div class="b">
+<div class="head">What the market does</div>
+<div class="body">
+Prices move <strong>every 5 minutes</strong>.<br>
+Traders fly blind.<br>
+Most volatile decade in 50 years.
+</div>
+</div>
+</div>
 
-Meanwhile, the **actual market** moves every five minutes.
-
-<br>
-
-Power traders, utilities, and data center operators are flying blind in the most volatile energy environment in 50 years — relying on tools built for a world that doesn't exist anymore.
-
-<br>
-
-> What if forecasts came from hundreds of competing models, were scored against reality every hour, and the best ones rose to the top automatically?
+> Hundreds of competing models. Scored against reality every hour. Best ones rise automatically.
 
 ---
 
@@ -174,37 +352,57 @@ Power traders, utilities, and data center operators are flying blind in the most
 
 A **marketplace for energy forecasts** built on Bittensor.
 
-<br>
-
-| | |
-|---|---|
-| **Anyone** can submit a forecast | Hedge fund quants, independent researchers, universities |
-| **Reality** decides who's right | Public grid data resolves every forecast automatically |
-| **Customers** buy the best | Traders, utilities, data centers pay for the top-ranked outputs |
-| **The network** rewards winners | Better forecasters earn more; bad ones earn nothing |
-
-No single vendor. No proprietary black box. No quarterly delay.
+<div class="cols">
+<div class="card">
+<div class="label">Anyone submits</div>
+<strong>Quants. Researchers. Universities.</strong>
+<div class="note">Fork the reference model. Improve it. Submit.</div>
+</div>
+<div class="card">
+<div class="label">Reality decides</div>
+<strong>Public grid data resolves everything.</strong>
+<div class="note">Automatic. Deterministic. Final.</div>
+</div>
+<div class="card">
+<div class="label">Customers buy the best</div>
+<strong>Traders, utilities, data centers.</strong>
+<div class="note">$5k–$100k per month.</div>
+</div>
+<div class="card">
+<div class="label">Network rewards winners</div>
+<strong>Better forecasters earn more.</strong>
+<div class="note">Bittensor emissions enforce the ranking on-chain.</div>
+</div>
+</div>
 
 ---
 
-## Why this actually works on Bittensor
+## Why this works on Bittensor
 
 <div class="kicker">The fit</div>
 
-Most "decentralized AI" pitches struggle to answer one question: *who decides who's right?* If it's a committee or a vote, the mechanism breaks.
+The hard question for every decentralized AI subnet: *who decides who's right?*
 
-Flux's answer: **the grid does.** ERCOT publishes the realized price. Either your forecast matched, or it didn't.
+**Flux's answer: the grid.** ERCOT publishes the realized price. The forecast matched or it didn't.
 
-<br>
-
-| | |
-|---|---|
-| Ground truth | Public ISO data — no DAO, no LLM judge, no dispute |
-| Compute economics | Forecasting is expensive; scoring is a single math operation |
-| Open competition | Beats single-vendor IP, which *is* the existing market structure |
-| Composable | Validators sell API access · subnet captures emissions · stakers capture both |
-
-The mechanism only works when validation is cheap, public, and unarguable. Power markets are all three.
+<div class="cols">
+<div class="card">
+<div class="label">Ground truth</div>
+Public ISO data. Deterministic. Final.
+</div>
+<div class="card">
+<div class="label">Compute economics</div>
+Forecasting: expensive. Scoring: a single math op. Asymmetric — exactly what Bittensor rewards.
+</div>
+<div class="card">
+<div class="label">Open competition</div>
+Many models beat one model. Every time.
+</div>
+<div class="card">
+<div class="label">Composable</div>
+Validators sell APIs. Subnet captures emissions. Stakers capture both.
+</div>
+</div>
 
 ---
 
@@ -212,17 +410,93 @@ The mechanism only works when validation is cheap, public, and unarguable. Power
 
 <div class="kicker">Where we start</div>
 
-One market, one product, prove the mechanism. Start with the grid whose demand is doubling fastest and whose data is fully open.
+One market. One product. Prove the mechanism. Start with the grid doubling fastest, with fully open data.
 
-| Property | Why this market first |
-|---|---|
-| Largest single demand shock on record | 94 GW today → **208 GW by 2030** (official high-case forecast) |
-| Fully open public data | Validators score for free; no licensing risk |
-| Highest price volatility globally | Biggest absolute forecast value |
-| Weak public baseline | Easy first ≥20% improvement target |
-| Existing crypto-native traders | First customers wallet-aligned |
+<div class="cols" style="grid-template-columns: 1.3fr 1fr; align-items: center;">
+<div>
 
-Adjacent grids follow in Q4 (CAISO, PJM). Europe + Asia + commodities (gas, refined products) in 2027.
+<svg viewBox="0 0 460 200" style="width:100%; height:auto;">
+  <!-- axes -->
+  <line x1="50" y1="170" x2="445" y2="170" stroke="#aab"/>
+  <line x1="50" y1="20" x2="50" y2="170" stroke="#aab"/>
+  <line x1="50" y1="50" x2="445" y2="50" stroke="#e0e4e0"/>
+  <line x1="50" y1="80" x2="445" y2="80" stroke="#e0e4e0"/>
+  <line x1="50" y1="110" x2="445" y2="110" stroke="#e0e4e0"/>
+  <line x1="50" y1="140" x2="445" y2="140" stroke="#e0e4e0"/>
+  <!-- y labels: 0 to 220 GW -->
+  <text x="44" y="174" text-anchor="end" font-size="10" fill="#666">0</text>
+  <text x="44" y="144" text-anchor="end" font-size="10" fill="#666">50</text>
+  <text x="44" y="114" text-anchor="end" font-size="10" fill="#666">100</text>
+  <text x="44" y="84" text-anchor="end" font-size="10" fill="#666">150</text>
+  <text x="44" y="54" text-anchor="end" font-size="10" fill="#666">200</text>
+  <text x="14" y="95" text-anchor="middle" font-size="10" fill="#0a4d68" font-weight="600" transform="rotate(-90 14 95)">Peak GW</text>
+  <!-- scale: 220 GW => y=14; 0 GW => y=170; px per GW = 156/220 = 0.709 -->
+  <!-- Today/historical line, then split into two scenarios -->
+  <!-- 2024=85, 2025=94, 2027=125, 2030 high=208, 2030 adj=139 -->
+  <!-- High case (top, darker) -->
+  <polyline fill="none" stroke="#0a4d68" stroke-width="2.5" points="100,109.7 170,103.3 270,81.3 410,22.5"/>
+  <!-- Adjusted case (lighter, dashed) -->
+  <polyline fill="none" stroke="#088395" stroke-width="2" stroke-dasharray="5,3" points="170,103.3 270,90 410,71.4"/>
+  <!-- points -->
+  <g fill="#0a4d68">
+    <circle cx="100" cy="109.7" r="3.5"/>
+    <circle cx="170" cy="103.3" r="3.5"/>
+    <circle cx="270" cy="81.3" r="3.5"/>
+    <circle cx="410" cy="22.5" r="4"/>
+  </g>
+  <g fill="#088395">
+    <circle cx="410" cy="71.4" r="4"/>
+  </g>
+  <!-- value labels -->
+  <text x="100" y="103" text-anchor="middle" font-size="10" fill="#0a4d68" font-weight="600">85</text>
+  <text x="170" y="97" text-anchor="middle" font-size="10" fill="#0a4d68" font-weight="600">94</text>
+  <text x="270" y="75" text-anchor="middle" font-size="10" fill="#0a4d68" font-weight="600">~125</text>
+  <text x="410" y="17" text-anchor="middle" font-size="11" fill="#0a4d68" font-weight="700">208</text>
+  <text x="415" y="86" font-size="11" fill="#088395" font-weight="700">139</text>
+  <!-- x labels -->
+  <g font-size="10" fill="#666" text-anchor="middle">
+    <text x="100" y="185">2024</text>
+    <text x="170" y="185">2025</text>
+    <text x="270" y="185">2027</text>
+    <text x="410" y="185">2030</text>
+  </g>
+  <!-- legend -->
+  <g font-size="9.5">
+    <line x1="60" y1="33" x2="80" y2="33" stroke="#0a4d68" stroke-width="2.5"/>
+    <text x="84" y="36" fill="#0a4d68">High case</text>
+    <line x1="160" y1="33" x2="180" y2="33" stroke="#088395" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="184" y="36" fill="#088395">Adjusted (−50% data-center haircut)</text>
+  </g>
+</svg>
+
+<div class="sub" style="font-size:0.7em; text-align:right; margin-top:-4px;">Source: ERCOT 2025 Long-Term Load Forecast (LTLF3)</div>
+</div>
+<div>
+<div class="card-dark">
+<div class="label">Today</div>
+<div class="value">94 GW</div>
+</div>
+<div class="card-dark" style="margin-top:10px;">
+<div class="label">2030 high case</div>
+<div class="value">208 GW</div>
+</div>
+</div>
+</div>
+
+<div class="cols-3" style="margin-top: 0.4em;">
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 12h10M12 7v10"/></svg>Open data</div>
+<div class="note" style="font-size:0.85em;">Free for validators · zero licensing risk</div>
+</div>
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/></svg>Highest volatility</div>
+<div class="note" style="font-size:0.85em;">Biggest absolute forecast value</div>
+</div>
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Easy first target</div>
+<div class="note" style="font-size:0.85em;">Weak public baseline · ≥20% beat</div>
+</div>
+</div>
 
 ---
 
@@ -230,22 +504,30 @@ Adjacent grids follow in Q4 (CAISO, PJM). Europe + Asia + commodities (gas, refi
 
 <div class="kicker">The supply side</div>
 
-Submit **probabilistic forecasts** of tomorrow's power prices across four time horizons — 5 minutes ahead, 1 hour, 24 hours, 1 week.
+Submit **probabilistic forecasts** across four horizons: 5min · 1h · 24h · 1 week.
 
 ```python
 Forecast(horizon, target_time, mean, p10, p50, p90)
 ```
 
-<br>
-
-| Mechanic | How it works |
-|---|---|
-| Sealed submission | Forecasts cryptographically committed before the window opens |
-| Anti-copying | Miners cannot peek at competitors before submitting |
-| Reference model | XGBoost on public load + weather + gas-price features (forkable) |
-| Sybil cost | Compute + data-feed fees self-bankrupt fake miners |
-
-Forking the reference model is the starting line, not the finish.
+<div class="cols">
+<div class="card">
+<div class="label">Sealed submission</div>
+Forecasts hash-committed before each window. Reveal after.
+</div>
+<div class="card">
+<div class="label">Anti-copying</div>
+Peers invisible until commitment lands.
+</div>
+<div class="card">
+<div class="label">Reference model</div>
+XGBoost on public load + weather + gas. Forkable.
+</div>
+<div class="card">
+<div class="label">Sybil cost</div>
+Compute + data-feed fees self-bankrupt fakes.
+</div>
+</div>
 
 ---
 
@@ -253,22 +535,28 @@ Forking the reference model is the starting line, not the finish.
 
 <div class="kicker">The scoring side</div>
 
-Every ~72 minutes:
+<div class="step">
+<div class="step-num">1</div>
+<div class="step-body"><strong>Pull realized prices</strong>from the grid's public API.</div>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<div class="step-body"><strong>Score each miner.</strong><code>score(m) = 0.5·Skill + 0.3·Calibration + 0.2·Breadth</code></div>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<div class="step-body"><strong>Commit-reveal weights.</strong>5-tempo delay defeats copiers.</div>
+</div>
+<div class="step">
+<div class="step-num">4</div>
+<div class="step-body"><strong>Serve forecast API.</strong>$5k–$100k / month.</div>
+</div>
 
-```
-1.  Pull realized prices from ERCOT's public API
-2.  score(m) = 0.5·Skill + 0.3·Calibration + 0.2·Breadth
-3.  Commit-reveal weight vector (5-tempo delay defeats copiers)
-4.  Serve the best forecasts via enterprise API
-```
-
-<br>
-
-| Signal | What it rewards | What it resists |
+| Signal | Rewards | Resists |
 |---|---|---|
-| **Skill** | Beating a public naive baseline | Overfitting (baseline rotates weekly) |
-| **Calibration** | Honest uncertainty intervals (CRPS) | Tight-but-wrong point forecasts |
-| **Breadth** | Good performance across all horizons | Single-horizon specialists gaming one cycle |
+| **Skill** | Beating the naive baseline | Overfitting — baseline rotates weekly |
+| **Calibration** | Honest uncertainty (CRPS) | Tight-but-wrong forecasts |
+| **Breadth** | Depth across horizons | Single-horizon specialists |
 
 ---
 
@@ -286,9 +574,20 @@ ERCOT day-ahead LMP · tempo 1284 · 2026-09-14 18:24 CDT
 commit_reveal  0x7f3e91ac42…  reveals in 5 tempos
 ```
 
-<br>
-
-Three independent signals differentiate quality. Forecasters worse than the naive baseline are **auto-excluded** before they can dilute consensus.
+<div class="cols-3">
+<div class="card">
+<div class="label">Differentiation</div>
+Three independent signals split four miners into four quality tiers.
+</div>
+<div class="card">
+<div class="label">Auto-exclusion</div>
+Forecasters worse than naive baseline are zeroed before diluting consensus.
+</div>
+<div class="card">
+<div class="label">On-chain proof</div>
+Weight commit hash settles in 5 tempos — copy attacks fail.
+</div>
+</div>
 
 ---
 
@@ -316,38 +615,64 @@ Every attack maps to one specific hyperparameter or capital commitment. **No hum
 
 ## How the system fits together
 
-```
-              ISO / Exchange feeds
-   ERCOT · CAISO · PJM · ENTSO-E · EIA · AIS · weather
-                       │
-                       │  deterministic resolution
-                       ▼
-   ┌─────────┐    ┌──────────────┐    ┌──────────┐
-   │ Miners  │───▶│  Validators  │───▶│   Yuma   │
-   │  prob.  │    │  Skill+CRPS  │    │ 41/41/18 │
-   │ forecasts    │  +Breadth    │    │          │
-   └─────────┘    └──────────────┘    └──────────┘
-                         │
-                         ▼
-                  Enterprise API
-                  $5k–$100k / mo
-```
+<div class="flow">
+<div class="flow-box">
+<div class="t">Miners</div>
+<div class="d">Probabilistic forecasts<br>multi-horizon · sealed</div>
+</div>
+<div class="flow-arrow">▶</div>
+<div class="flow-box">
+<div class="t">Validators</div>
+<div class="d">Skill + CRPS + Breadth<br>+ enterprise API</div>
+</div>
+<div class="flow-arrow">▶</div>
+<div class="flow-box">
+<div class="t">Yuma · 41/41/18</div>
+<div class="d">Emissions enforce ranking<br>commit-reveal weights</div>
+</div>
+</div>
 
-A closed loop: better forecasts → more API revenue → larger emissions → better forecasts.
+<div style="text-align:center; color:#088395; font-weight:600; margin: 1em 0;">▲ ISO ground truth · weather · AIS feeds · EIA ▲</div>
+
+<div class="cols">
+<div class="card">
+<div class="label">Closed loop</div>
+Better forecasts → more API revenue → larger emissions → better forecasts.
+</div>
+<div class="card">
+<div class="label">Single source of truth</div>
+Public grid data. No human DAO. No LLM judge. No off-chain attestation.
+</div>
+</div>
 
 ---
 
 ## Who pays
 
-| Tier | Audience | Annual contract |
-|---|---|---|
-| **Crypto-quant** | On-chain energy desks · RWA protocols · dozens of crypto-native funds | $60k |
-| **Trading desk** | Mid-tier ERCOT/CAISO traders, NA + EU | $300k |
-| **Enterprise** | Utilities · IPPs · data-center operators | $1.2M+ |
+<div class="cols-3">
+<div class="card-dark">
+<div class="label">Crypto-quant</div>
+<div class="value" style="font-size:1.4em;">$60k</div>
+<span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
+<div class="note" style="color:#a8c8d8; margin-top:8px;">On-chain energy desks · RWA protocols · crypto-native funds</div>
+</div>
+<div class="card-dark">
+<div class="label">Trading desk</div>
+<div class="value" style="font-size:1.4em;">$300k</div>
+<span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
+<div class="note" style="color:#a8c8d8; margin-top:8px;">Mid-tier ERCOT/CAISO traders · NA + EU</div>
+</div>
+<div class="card-dark">
+<div class="label">Enterprise</div>
+<div class="value" style="font-size:1.4em;">$1.2M+</div>
+<span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
+<div class="note" style="color:#a8c8d8; margin-top:8px;">Utilities · IPPs · data-center operators</div>
+</div>
+</div>
 
-**Three-year ARR target: $15–30M** across validators.
+<p class="big" style="text-align:center; margin-top:0.6em;">Three-year ARR target: $15–30M</p>
 
-First-customer wedge: crypto-native energy desks already trust both Bittensor *and* ERCOT markets. They're underserved by Bloomberg (too expensive, not crypto-native) and Modo (valuation-focused, not real-time). This wedge funds the first 18 months alone.
+<div class="sub" style="text-align:center;">First-customer wedge: crypto-native energy desks underserved by Bloomberg (too expensive) and Modo (valuation-focused). This wedge alone funds the first 18 months.</div>
 
 ---
 
@@ -372,18 +697,34 @@ Every value above defends a named attack. Spec frozen against Yuma v3 + Taoflow 
 
 ## Why Flux
 
+<div class="vs">
+<div class="a">
+<div class="head">Modo Energy</div>
+<div class="body">
+£25M Series B · Dec 2025<br>
+<strong>Single proprietary model</strong><br>
+Quarterly valuations<br>
+Electrification assets only
+</div>
+</div>
+<div class="mid">VS</div>
+<div class="b">
+<div class="head">Flux</div>
+<div class="body">
+Open-competition subnet<br>
+<strong>Many competing models</strong><br>
+Live forecasts every 72 min<br>
+All energy commodities
+</div>
+</div>
+</div>
+
 | Axis | Position |
 |---|---|
 | **Product** | Three priced tiers · existing customer budgets · $15–30M ARR path |
 | **Organization** | Open competition · zero DAO bootstrap risk |
-| **Verification** | Public grid data only · zero humans in the scoring loop |
+| **Verification** | Public grid data only · zero humans in scoring loop |
 | **Game-theory** | Eight named defenses · each maps to a hyperparameter or capital commitment |
-
-<br>
-
-vs **Modo Energy** (£25M Series B, Dec 2025): single proprietary model, quarterly valuations, electrification assets only.
-
-**Flux:** many competing models, live forecasts every 72 minutes, all energy commodities.
 
 ---
 
