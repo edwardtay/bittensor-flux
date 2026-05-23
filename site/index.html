@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flux — Real-time energy intelligence on Bittensor</title>
+<meta name="description" content="A marketplace for energy forecasts. Many competing models, scored against ISO ground truth every 72 minutes.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfbfa;
+    --surface: #ffffff;
+    --surface-2: #f3f5f3;
+    --border: #e4e4e0;
+    --fg: #1a1a1a;
+    --fg-2: #555;
+    --muted: #888;
+    --brand: #0a4d68;
+    --brand-2: #088395;
+    --accent: #88c5d4;
+    --radius: 6px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); }
+  body {
+    font: 16px/1.6 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--fg);
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.005em;
+  }
+  a { color: var(--brand); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+    background: var(--surface-2);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--brand);
+  }
+
+  .hero {
+    padding: 100px 24px 80px;
+    background: linear-gradient(180deg, var(--bg) 0%, #eef3f5 100%);
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo-wrap {
+    display: inline-flex; align-items: center; gap: 12px;
+    margin-bottom: 28px;
+  }
+  .logo-mark {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--brand);
+    display: grid; place-items: center;
+  }
+  .logo-mark svg { width: 26px; height: 26px; }
+  .brand-name { font-size: 1.4em; font-weight: 700; color: var(--brand); letter-spacing: -0.02em; }
+  h1 {
+    font-size: 3.2em;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--brand);
+    letter-spacing: -0.03em;
+    margin: 0 0 16px;
+    max-width: 900px;
+    margin-inline: auto;
+  }
+  .lede {
+    font-size: 1.25em;
+    color: var(--fg-2);
+    max-width: 720px;
+    margin: 0 auto 36px;
+    line-height: 1.5;
+  }
+  .cta {
+    display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: all 0.15s;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--brand);
+    color: white;
+  }
+  .btn-primary:hover { background: #0d6080; text-decoration: none; }
+  .btn-secondary {
+    background: white;
+    color: var(--brand);
+    border-color: var(--border);
+  }
+  .btn-secondary:hover { border-color: var(--brand); text-decoration: none; }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 24px;
+  }
+  .kicker {
+    color: var(--brand-2);
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: -0.02em;
+    margin: 0 0 12px;
+  }
+  h3 { font-size: 1.1em; color: var(--brand); font-weight: 600; margin: 0 0 8px; }
+  .section { margin-bottom: 70px; }
+  .section p { font-size: 1.05em; color: var(--fg-2); max-width: 760px; line-height: 1.65; margin: 0 0 14px; }
+  .section strong { color: var(--brand); }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 28px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+  @media (max-width: 720px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    h1 { font-size: 2.4em; }
+  }
+  .card {
+    background: white;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--brand-2);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+  }
+  .card .label {
+    color: var(--brand-2);
+    font-size: 0.72em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .card .icon { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .card .big { font-size: 1.7em; font-weight: 700; color: var(--brand); letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 6px; }
+  .card .note { color: var(--fg-2); font-size: 0.92em; line-height: 1.5; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 22px 0;
+    font-size: 0.95em;
+  }
+  th {
+    background: var(--brand);
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  td { padding: 9px 14px; border-bottom: 1px solid var(--border); }
+  tr:nth-child(even) td { background: var(--surface-2); }
+
+  pre {
+    background: #1a1f24;
+    color: #d8e0e8;
+    padding: 18px 22px;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    font-size: 0.85em;
+    line-height: 1.5;
+    border-left: 3px solid var(--brand-2);
+  }
+  pre code { background: transparent; color: #d8e0e8; padding: 0; font-size: inherit; }
+
+  footer {
+    background: var(--brand);
+    color: #b3d4dc;
+    padding: 40px 24px;
+    text-align: center;
+    font-size: 0.9em;
+  }
+  footer a { color: var(--accent); }
+  footer .sep { color: rgba(255,255,255,0.2); margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="logo-wrap">
+    <div class="logo-mark">
+      <svg viewBox="0 0 64 64"><path d="M36 10L18 36h12l-3 18 18-26H33l3-18z" fill="#88c5d4"/></svg>
+    </div>
+    <div class="brand-name">Flux</div>
+  </div>
+
+  <h1>Real-time energy intelligence on Bittensor</h1>
+
+  <p class="lede">
+    A marketplace for energy forecasts. Many competing models.
+    One unarguable source of truth — scored against ISO ground truth every 72 minutes.
+  </p>
+
+  <div class="cta">
+    <a class="btn btn-primary" href="slides.html">View the deck →</a>
+    <a class="btn btn-secondary" href="https://github.com/edwardtay/bittensor-flux" target="_blank">GitHub</a>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="section">
+    <div class="kicker">The setup</div>
+    <h2>AI is the largest energy story of our lifetime</h2>
+    <p>
+      By 2030, data centers will use <strong>more electricity than Japan</strong>
+      (IEA <em>Energy and AI</em>, April 2025). Global power demand grows near <strong>4% per year</strong>
+      through 2027. Every major grid — China, US, Europe, India — is repricing electricity in real time.
+    </p>
+    <p>
+      Demand is one side. Supply is the other — and supply runs through chokepoints.
+      Hormuz, Russia–Ukraine, Red Sea, Taiwan, climate volatility — geopolitics rewires energy flows in days.
+    </p>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="label"><svg class="icon" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>Data-center load</div>
+        <div class="big">2×</div>
+        <div class="note">945 TWh by 2030 (IEA)</div>
+      </div>
+      <div class="card">
+        <div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>Global demand</div>
+        <div class="big">~4% / yr</div>
+        <div class="note">through 2027 (IEA)</div>
+      </div>
+      <div class="card" style="border-left-color:#c43d3d;">
+        <div class="label" style="color:#c43d3d;"><svg class="icon" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Supply shocks</div>
+        <div class="big" style="color:#c43d3d; font-size:1.2em;">Constant</div>
+        <div class="note">Hormuz · Ukraine · LNG</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="kicker">The gap</div>
+    <h2>Forecasts are stuck in the past</h2>
+    <p>
+      Today's energy intelligence comes from a handful of consulting firms.
+      One firm, one model, one opinion — sold for hundreds of thousands of dollars per seat,
+      updated <strong>quarterly</strong>. Meanwhile, the actual market moves every five minutes.
+    </p>
+    <p>
+      Power traders, utilities, and data-center operators fly blind in the most volatile
+      energy environment in 50 years.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="kicker">The idea</div>
+    <h2>Flux is a marketplace for forecasts</h2>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="label">Anyone submits</div>
+        <h3>Quants. Researchers. Universities.</h3>
+        <div class="note">Fork the reference model. Improve it. Submit. Bittensor emissions reward the best automatically.</div>
+      </div>
+      <div class="card">
+        <div class="label">Reality decides</div>
+        <h3>Public grid data resolves everything.</h3>
+        <div class="note">ERCOT publishes the realized price. Either your forecast matched, or it didn't. No DAO. No LLM judge. No dispute.</div>
+      </div>
+      <div class="card">
+        <div class="label">Customers buy the best</div>
+        <h3>Traders. Utilities. Data centers.</h3>
+        <div class="note">Three tiers from $5k to $100k+ per month. Enterprise API served by validators.</div>
+      </div>
+      <div class="card">
+        <div class="label">Open competition</div>
+        <h3>Many models beat one model.</h3>
+        <div class="note">Bloomberg and Modo sell single proprietary outputs. Flux scores hundreds against reality every 72 minutes.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="kicker">The mechanism</div>
+    <h2>How it works</h2>
+
+    <p>Every ~72 minutes (one Bittensor tempo):</p>
+
+    <table>
+      <thead>
+        <tr><th>Step</th><th>What happens</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Miners submit sealed probabilistic forecasts across 5min · 1h · 24h · 1-week horizons</td></tr>
+        <tr><td>2</td><td>Validators pull realized prices from the grid's public API</td></tr>
+        <tr><td>3</td><td>Score each miner: <code>0.5·Skill + 0.3·Calibration + 0.2·Breadth</code></td></tr>
+        <tr><td>4</td><td>Commit-reveal weights on-chain (5-tempo delay defeats copiers)</td></tr>
+        <tr><td>5</td><td>Serve the best forecasts via enterprise API</td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:24px;">
+      Eight named attacks. Eight named defenses. Each maps to one specific hyperparameter or capital commitment —
+      no human dependency anywhere in the scoring loop.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="kicker">Where we start</div>
+    <h2>v1 — day-ahead power prices</h2>
+
+    <p>
+      One market, one product, prove the mechanism. Start with the grid doubling fastest, with fully open data.
+    </p>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="label">2025 forecast</div>
+        <div class="big">94 GW</div>
+        <div class="note">ERCOT peak demand</div>
+      </div>
+      <div class="card">
+        <div class="label">2030 high case</div>
+        <div class="big">208 GW</div>
+        <div class="note">ERCOT 2025 LTLF3 forecast</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="kicker">Resources</div>
+    <h2>Read more</h2>
+
+    <div class="grid-3">
+      <a class="card" href="slides.html" style="text-decoration:none; color:inherit; display:block;">
+        <div class="label">Deck</div>
+        <h3>The full pitch</h3>
+        <div class="note">16 slides covering problem, mechanism, anti-gaming, customers.</div>
+      </a>
+      <a class="card" href="https://github.com/edwardtay/bittensor-flux/blob/main/proposal.md" target="_blank" style="text-decoration:none; color:inherit; display:block;">
+        <div class="label">Proposal</div>
+        <h3>Mechanism spec</h3>
+        <div class="note">Full whitepaper-grade design: miners, validators, defenses, hyperparameters.</div>
+      </a>
+      <a class="card" href="https://github.com/edwardtay/bittensor-flux" target="_blank" style="text-decoration:none; color:inherit; display:block;">
+        <div class="label">Source</div>
+        <h3>GitHub</h3>
+        <div class="note">Open source. Mechanism spec frozen against Yuma v3 + Taoflow (Nov 2025).</div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <strong style="color:white;">Flux</strong>
+  <span class="sep">·</span>
+  Real-time energy intelligence, Bittensor-native
+  <span class="sep">·</span>
+  <a href="https://github.com/edwardtay/bittensor-flux">github.com/edwardtay/bittensor-flux</a>
+</footer>
+
+</body>
+</html>
