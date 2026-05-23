@@ -73,7 +73,7 @@ style: |
     margin: 1em 0;
     font-style: normal;
   }
-  ul { line-height: 1.55; }
+  ul { line-height: 1.6; }
   ul li::marker { color: #088395; }
   hr { border: 0; border-top: 1px solid #d8d8d4; margin: 1.2em 0; }
   section.lead {
@@ -101,11 +101,25 @@ style: |
     margin-bottom: -0.4em;
   }
   .big {
-    font-size: 1.6em;
-    line-height: 1.2;
+    font-size: 1.8em;
+    line-height: 1.15;
     color: #0a4d68;
-    font-weight: 600;
-    margin: 0.3em 0;
+    font-weight: 700;
+    margin: 0.4em 0;
+    letter-spacing: -0.02em;
+  }
+  .huge {
+    font-size: 2.8em;
+    line-height: 1.1;
+    color: #0a4d68;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0.2em 0;
+  }
+  .sub {
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
   }
   header, footer { color: #999; font-size: 0.65em; letter-spacing: 0.05em; }
 ---
@@ -118,55 +132,107 @@ style: |
 
 <br>
 
-Open-competition forecasting of power, gas, and refined-product markets
-— scored against ISO ground truth every 72 minutes.
+A market for forecasts. Many competing models. One unarguable source of truth.
 
 ---
 
-## The repricing
+## AI is the largest energy story of our lifetime
 
-<div class="kicker">Demand shock</div>
+<div class="kicker">The setup</div>
 
-<p class="big">ERCOT peak load: 29 → 77 GW in 18 months.</p>
+<p class="huge">Texas alone expects to <em>double</em> its electricity demand by 2030.</p>
 
-Every major ISO is revising upward. AI data-center buildout is the largest single-decade demand event since post-war electrification.
+Not over 30 years. **Over 5.**
 
-**Forecast value scales with volatility.** Hormuz disruptions, climate shocks, and dispatch-mix swings now move LMPs by 10× intraday.
+Every major power grid — US, Europe, China — is repricing electricity in real time. Data centers, EVs, electrified industry, and air-conditioning load growth all compound at once.
 
-> Legacy vendors (Bloomberg NEF, Enverus, Modo) sell **quarterly static valuations** from one proprietary model. The market needs **live operational forecasts** from many competing models.
+<br>
+
+> The people who can **see the next price before everyone else** make fortunes. The people who can't go bankrupt.
 
 ---
 
-## Why this fits Bittensor
+## But forecasts are stuck in the past
 
-|  |  |
+<div class="kicker">The gap</div>
+
+Today's energy intelligence comes from a handful of consulting firms selling **PDF reports updated once a quarter**. One firm, one model, one opinion — sold for hundreds of thousands of dollars per seat.
+
+Meanwhile, the **actual market** moves every five minutes.
+
+<br>
+
+Power traders, utilities, and data center operators are flying blind in the most volatile energy environment in 50 years — relying on tools built for a world that doesn't exist anymore.
+
+<br>
+
+> What if forecasts came from hundreds of competing models, were scored against reality every hour, and the best ones rose to the top automatically?
+
+---
+
+## That's what Flux is
+
+<div class="kicker">The idea</div>
+
+A **marketplace for energy forecasts** built on Bittensor.
+
+<br>
+
+| | |
 |---|---|
-| **Deterministic ground truth** | ISO publishes settled LMP — no DAO, no LLM judge, no dispute |
-| **Asymmetric compute** | Forecasting is expensive · scoring is a `numpy.mean` |
-| **Many independent quants** | Open competition beats single-vendor IP, which is the existing market structure |
-| **Composable** | Validators sell API revenue · subnet captures emissions · stakers capture both |
+| **Anyone** can submit a forecast | Hedge fund quants, independent researchers, universities |
+| **Reality** decides who's right | Public grid data resolves every forecast automatically |
+| **Customers** buy the best | Traders, utilities, data centers pay for the top-ranked outputs |
+| **The network** rewards winners | Better forecasters earn more; bad ones earn nothing |
 
-The mechanism *only* works when validation is cheap, public, and unarguable. ERCOT day-ahead LMP is all three.
+No single vendor. No proprietary black box. No quarterly delay.
 
 ---
 
-## v1 — ERCOT day-ahead LMP
+## Why this actually works on Bittensor
 
-| Property | Why it matters |
+<div class="kicker">The fit</div>
+
+Most "decentralized AI" pitches struggle to answer one question: *who decides who's right?* If it's a committee or a vote, the mechanism breaks.
+
+Flux's answer: **the grid does.** ERCOT publishes the realized price. Either your forecast matched, or it didn't.
+
+<br>
+
+| | |
 |---|---|
-| Open data via ERCOT API + EIA | Validators score free; no licensing risk |
-| Highest LMP volatility in US | Largest absolute forecast value |
-| Weak public naive baseline | Clean first ≥20% skill-score target |
-| Crypto-energy desks already trade it | First 20 customers wallet-aligned |
-| AI-DC repricing narrative | The story that closes meetings |
+| Ground truth | Public ISO data — no DAO, no LLM judge, no dispute |
+| Compute economics | Forecasting is expensive; scoring is a single math operation |
+| Open competition | Beats single-vendor IP, which *is* the existing market structure |
+| Composable | Validators sell API access · subnet captures emissions · stakers capture both |
 
-Single market for v1. CAISO + PJM follow in Q4. ENTSO-E + commodities in 2027.
+The mechanism only works when validation is cheap, public, and unarguable. Power markets are all three.
+
+---
+
+## v1 — Texas (ERCOT) day-ahead power prices
+
+<div class="kicker">Where we start</div>
+
+One market, one product, prove the mechanism.
+
+| Property | Why Texas first |
+|---|---|
+| Largest demand shock | 94 GW today → **208 GW by 2030** (high case), or 139 GW after ERCOT's haircut |
+| Open public data | Free for validators to score |
+| Highest price volatility in US | Biggest absolute forecast value |
+| Weak public baseline | Easy first ≥20% improvement target |
+| Existing crypto-native traders | First customers wallet-aligned, easy to onboard |
+
+CAISO + PJM follow in Q4. Europe (ENTSO-E) + commodities (gas, refined products) in 2027.
 
 ---
 
 ## What miners do
 
-Submit **probabilistic forecasts** across four horizons — 5min, 1h, 24h, 168h:
+<div class="kicker">The supply side</div>
+
+Submit **probabilistic forecasts** of tomorrow's power prices across four time horizons — 5 minutes ahead, 1 hour, 24 hours, 1 week.
 
 ```python
 Forecast(horizon, target_time, mean, p10, p50, p90)
@@ -174,41 +240,41 @@ Forecast(horizon, target_time, mean, p10, p50, p90)
 
 <br>
 
-| Mechanic | Detail |
+| Mechanic | How it works |
 |---|---|
-| Submission | `sha256(forecast ‖ nonce)` committed before window opens, revealed after |
-| Anti-copy | Miners cannot observe peers before committing |
-| Reference impl | XGBoost on public load + weather + Henry Hub features |
-| Compute floor | Sybils self-bankrupt on feature pipeline + inference cost |
+| Sealed submission | Forecasts cryptographically committed before the window opens |
+| Anti-copying | Miners cannot peek at competitors before submitting |
+| Reference model | XGBoost on public load + weather + gas-price features (forkable) |
+| Sybil cost | Compute + data-feed fees self-bankrupt fake miners |
 
-Forking the reference miner is the starting line, not the finish.
+Forking the reference model is the starting line, not the finish.
 
 ---
 
 ## What validators do
 
-Every tempo (~72 min):
+<div class="kicker">The scoring side</div>
 
-<br>
+Every ~72 minutes:
 
 ```
-1.  Pull realized LMP from ERCOT API
+1.  Pull realized prices from ERCOT's public API
 2.  score(m) = 0.5·Skill + 0.3·Calibration + 0.2·Breadth
-3.  Commit-reveal weights (5-tempo delay defeats copiers)
-4.  Serve forecast API to enterprise customers
+3.  Commit-reveal weight vector (5-tempo delay defeats copiers)
+4.  Serve the best forecasts via enterprise API
 ```
 
 <br>
 
-| Signal | Definition | Resists |
+| Signal | What it rewards | What it resists |
 |---|---|---|
-| **Skill** | `1 − MSE(m)/MSE(naive)`, baseline rotates weekly | Overfitting to one baseline |
-| **Calibration** | CRPS-normalized; punishes tight-but-wrong intervals | Point-forecast gaming |
-| **Breadth** | Mean skill across all four horizons | Single-horizon specialists |
+| **Skill** | Beating a public naive baseline | Overfitting (baseline rotates weekly) |
+| **Calibration** | Honest uncertainty intervals (CRPS) | Tight-but-wrong point forecasts |
+| **Breadth** | Good performance across all horizons | Single-horizon specialists gaming one cycle |
 
 ---
 
-## Sample tempo output
+## A real scoring round
 
 ```
 ERCOT day-ahead LMP · tempo 1284 · 2026-09-14 18:24 CDT
@@ -222,8 +288,9 @@ ERCOT day-ahead LMP · tempo 1284 · 2026-09-14 18:24 CDT
 commit_reveal  0x7f3e91ac42…  reveals in 5 tempos
 ```
 
-Three signals differentiate quality. Below-naive forecasters are auto-excluded
-before they can dilute consensus.
+<br>
+
+Three independent signals differentiate quality. Forecasters worse than the naive baseline are **auto-excluded** before they can dilute consensus.
 
 ---
 
@@ -236,20 +303,20 @@ td, th { padding: 5px 10px; }
 
 | Attack vector | Defense | Parameter |
 |---|---|---|
-| Weight copying — validator harvests vTrust | Commit-reveal weights | `commit_reveal_period = 5` |
-| Forecast copying — miner observes peers | Sealed-submission hash | per-tempo nonce |
-| Validator cabal — collusion on consensus | κ-clipping raised | `kappa = 0.6` |
-| Single-miner pump — narrow weight vector | Min weight spread | `min_allowed_weights = 16` |
-| Naive-baseline gaming — fit to fixed target | Baseline rotates weekly + skill floor | persistence → ARIMA → XGB |
-| Sybil miners — flood UIDs | Burn + feed cost + dereg | default burn + 5000-block immunity |
-| Bond whipsaw — whales flip α | Tight liquid-α bounds | `alpha_low/high = 0.05 / 0.35` |
-| Flow-emission spiral — dTAO unstake death | $1M pre-fund + 20% API revenue redirect | treasury policy |
+| Weight copying — validator harvests vTrust for free | Commit-reveal weights | `commit_reveal_period = 5` |
+| Forecast copying — miner peeks at peers | Sealed-submission hash | per-tempo nonce |
+| Validator cabal — collusion on consensus | κ-clipping raised above default | `kappa = 0.6` |
+| Single-miner pump — narrow weight vector | Forced minimum weight spread | `min_allowed_weights = 16` |
+| Naive-baseline gaming — fit to fixed target | Weekly baseline rotation + skill floor | persistence → ARIMA → XGB |
+| Sybil miners — flood UID slots | Burn cost + data-feed cost + dereg | default burn + 5000-block immunity |
+| Bond whipsaw — whales flip α to escape penalty | Tight liquid-α bounds | `alpha_low/high = 0.05 / 0.35` |
+| Flow-emission spiral — Taoflow unstake death | $1M pre-fund + 20% API revenue redirect | treasury policy |
 
-Every attack maps to a specific hyperparameter or capital commitment. No human dependency anywhere.
+Every attack maps to one specific hyperparameter or capital commitment. **No human dependency anywhere.**
 
 ---
 
-## Architecture
+## How the system fits together
 
 ```
               ISO / Exchange feeds
@@ -268,21 +335,21 @@ Every attack maps to a specific hyperparameter or capital commitment. No human d
                   $5k–$100k / mo
 ```
 
-Closed loop. Forecast quality → API revenue → miner emissions → forecast quality.
+A closed loop: better forecasts → more API revenue → larger emissions → better forecasts.
 
 ---
 
-## Customer economics
+## Who pays
 
-| Tier | Audience | ACV |
+| Tier | Audience | Annual contract |
 |---|---|---|
-| **Crypto-quant** | On-chain energy desks · RWA protocols · ~40 funds | $60k |
+| **Crypto-quant** | On-chain energy desks · RWA protocols · dozens of crypto-native funds | $60k |
 | **Trading desk** | Mid-tier ERCOT/CAISO traders, NA + EU | $300k |
 | **Enterprise** | Utilities · IPPs · data-center operators | $1.2M+ |
 
 **Three-year ARR target: $15–30M** across validators.
 
-First-customer wedge: crypto-native energy desks already trust both Bittensor and ERCOT markets. Underserved by Bloomberg (too expensive, not crypto-native) and by Modo (valuation-focused, not real-time). 18-month runway funded from this wedge alone.
+First-customer wedge: crypto-native energy desks already trust both Bittensor *and* ERCOT markets. They're underserved by Bloomberg (too expensive, not crypto-native) and Modo (valuation-focused, not real-time). This wedge funds the first 18 months alone.
 
 ---
 
@@ -301,7 +368,7 @@ btcli sudo set --param bonds_moving_avg     --value 900000
 btcli sudo set --param immunity_period      --value 5000
 ```
 
-Every value above defends a named attack on the previous slide. Spec is frozen against Yuma v3.
+Every value above defends a named attack. Spec frozen against Yuma v3 + Taoflow (Nov 2025).
 
 ---
 
@@ -309,13 +376,16 @@ Every value above defends a named attack on the previous slide. Spec is frozen a
 
 | Axis | Position |
 |---|---|
-| **Product** | Three priced tiers · existing budget lines · $15–30M ARR path · 20 wedge customers wallet-aligned |
-| **Organization** | Open competition · miners self-select on compute economics · zero DAO bootstrap risk |
-| **Verification** | Skill + CRPS + breadth · public ERCOT data only · zero humans in scoring loop |
+| **Product** | Three priced tiers · existing customer budgets · $15–30M ARR path |
+| **Organization** | Open competition · zero DAO bootstrap risk |
+| **Verification** | Public grid data only · zero humans in the scoring loop |
 | **Game-theory** | Eight named defenses · each maps to a hyperparameter or capital commitment |
 
-vs **Modo Energy** ($33M Series B, Dec 2025): proprietary single-model, quarterly valuations.
-**Flux:** open-competition multi-model, live forecasts scored every 72 min, across all energy commodities.
+<br>
+
+vs **Modo Energy** (£25M Series B, Dec 2025): single proprietary model, quarterly valuations, electrification assets only.
+
+**Flux:** many competing models, live forecasts every 72 minutes, all energy commodities.
 
 ---
 
