@@ -1,6 +1,6 @@
 # Flux — Proposal
 
-**v0.2 · 2026-05-23**
+**v0.3 · 2026-05-23**
 
 Real-time energy-market intelligence as a Bittensor subnet. Open-competition forecasting of power prices, load, and commodity flows, scored deterministically against ISO ground truth every tempo (~72 min).
 
@@ -8,7 +8,11 @@ Real-time energy-market intelligence as a Bittensor subnet. Open-competition for
 
 ## 1. Problem
 
-AI data-center buildout repriced ERCOT peak load from 29 → 77 GW in 18 months. Every ISO is in the same shape. Legacy vendors (Bloomberg NEF, Enverus, Modo) sell quarterly static valuations from single proprietary models — structurally cannot serve real-time, multi-horizon, multi-commodity forecasting.
+AI data-center buildout is the largest energy story of the decade. The IEA projects global data-center electricity consumption to **double from 415 TWh (2024) to 945 TWh by 2030** — roughly 3% of all electricity on Earth. ERCOT's own 2025 Long-Term Load Forecast projects Texas peak demand rising from **94 GW today to 208 GW by 2030** in the high case (139 GW even after the operator's own 50% data-center haircut).
+
+Layer on geopolitical supply shocks — Strait of Hormuz (20% of global oil and LNG flows), Russia/Ukraine restructuring European gas, Red Sea and Panama shipping disruptions — and energy markets reprice in days rather than quarters.
+
+Legacy vendors (Bloomberg NEF, Enverus, Modo Energy, Wood Mackenzie) sell quarterly static valuations from single proprietary models. They structurally cannot serve real-time, multi-horizon, multi-commodity forecasting at the speed the market now moves.
 
 Bittensor fits because ISO data resolves forecasts deterministically, hundreds of quants can compete openly, and scoring is automatable with zero human judgment.
 
@@ -55,7 +59,7 @@ Scoring is fully deterministic — no human DAO, no LLM judges, no off-chain dis
 | **Sybil miners** flooding UIDs | Bittensor default burn + immunity + deregistration. Forecasting is compute-bound + data-feed-bound — Sybils self-bankrupt. | `immunity_period = 5_000` |
 | **Naive-baseline gaming** | Baseline rotates weekly; miners with `Skill < 0` for 3+ tempos zeroed | rotating |
 | **Bond whipsaw** by whales | Tight liquid-α | `alpha_low = 0.05`, `alpha_high = 0.35` |
-| **Flow-emission death spiral** (dTAO: negative net stake flow → zero emissions → miner exodus) | $1M USDC owner pre-fund + 20% API revenue redirect to miners during low-emission windows + ≥6-month staker API discount | treasury policy |
+| **Flow-emission death spiral** (Taoflow, Nov 2025: negative net stake flow → zero emissions → miner exodus) | Planned **$1M reserve** from owner share + 20% API revenue redirect to miners during low-emission windows + ≥6-month staker API discount | treasury policy |
 
 No defense relies on humans, DAOs, or off-chain attestation. Every attack maps to a named hyperparameter or treasury commitment.
 
@@ -73,23 +77,63 @@ sn.create_subnet(
 )
 ```
 
-Standard 41% miner / 41% validator+stakers / 18% owner emission split. Owner treasury funds the $1M pre-fund, data-feed costs, and baseline maintenance.
+Standard 41% miner / 41% validator+stakers / 18% owner emission split. Owner treasury funds the planned $1M reserve, ISO + commodity data feeds, and baseline maintenance.
 
 ## 6. Why Flux
 
 | Axis | Answer |
 |---|---|
-| **Product** | 3 customer tiers with existing budget: crypto-energy funds ($5k/mo, ~40 active wallets), trading desks ($25k/mo), enterprise utilities ($100k+/mo). Path to $15–30M API ARR by year 3. |
+| **Product** | 3 customer tiers with existing budget: crypto-native quant funds (~$5k/mo, dozens of active funds), trading desks (~$25k/mo), enterprise utilities and data-center operators ($100k+/mo). Three-year target: **$15–30M API ARR** across validators. |
 | **Organization** | Open competition — no human coordination needed. Miners self-select on compute economics. No DAO bootstrap risk. |
 | **Verification** | Skill + CRPS + horizon-breadth, all resolved against public ERCOT data. Zero human-in-the-loop. |
 | **Game-theory** | 8 named defenses, each targeting a specific attack with a specific hyperparameter or treasury commitment (§4). |
 
 ## 7. Roadmap
 
-- **v0:** ERCOT-only prototype + this proposal + slides
-- **Q3 2026:** Subnet registration; 20 crypto-energy fund pilots
-- **Q4 2026:** CAISO + PJM; first $10k/mo enterprise customer
-- **2027:** ENTSO-E, Henry Hub gas, refined-product cracks; $1M MRR
+All dates are targets, not commitments.
+
+- **Today (May 2026):** Mechanism spec frozen. Proposal + deck + site shipped. Repo public.
+- **Q3 2026:** Reference miner built. 30-day backtest gate test passed (≥20% improvement over naive baseline). Subnet registered on Bittensor mainnet. First crypto-native pilot customers.
+- **Q4 2026:** CAISO + PJM markets added. First $10k/mo enterprise customer signed.
+- **2027:** ENTSO-E (Europe), Henry Hub gas, refined-product cracks. Target $1M MRR by Q1 2027.
+
+## 8. Current status
+
+This is the design-phase honest version, not a marketing pitch.
+
+| Built | Not yet built |
+|---|---|
+| Mechanism spec (this document) | Reference miner code |
+| Public proposal + deck + landing page | Validator scoring pipeline |
+| Open-source repository (MIT) | Backtest against ERCOT history |
+| Bilingual pitch script (EN / 中文) | Customer LOIs |
+| Captain-deployed site at bittensor-flux.lever-labs.com | Subnet registration |
+
+## 9. Gate tests (six-month kill criteria)
+
+Three tests. Pass all three to keep building. Fail any two, reconsider.
+
+1. **Beat naive baselines by ≥20%** on ERCOT day-ahead LMP across 30 days of historical data. If competitive miners cannot beat yesterday-plus-seasonal, the mechanism is wrong.
+2. **One paying enterprise customer at ≥$10k/month** (not a crypto-native pilot — a real energy-market participant using forecasts in production).
+3. **Net stake inflow positive every month.** Under Taoflow, negative net flow zeros emissions. If stake does not flow in, the subnet dies.
+
+## 10. Non-goals
+
+- Real subtensor node in v0 demo — mock the chain layer; show the mechanism.
+- Multi-market at launch — ERCOT only.
+- Training models from scratch — fork open baselines.
+- Custom on-chain governance — use Yuma v3 + Taoflow as-is.
+- Unicorn ambitions — realistic ceiling is $50–150M enterprise value over five years.
+
+## Sources
+
+- [IEA, *Energy and AI*, April 2025](https://www.iea.org/reports/energy-and-ai) — 945 TWh by 2030, ~3% of global electricity
+- [ERCOT 2025 Long-Term Load Forecast](https://www.ercot.com/files/docs/2025/04/07/8.1-Long-Term-Load-Forecast-Update-2025-2031-and-Methodology-Changes.pdf) — 94 → 208 GW high case
+- [EIA, World Oil Transit Chokepoints](https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints) — Hormuz 20% of oil + LNG flows (2024)
+- [Modo Energy Series B, December 2025](https://www.moltenventures.com/news/banking-on-better-benchmarks-moltens-leads-25m-series-b-investment-in-modo-energy) — £25M Series B, Molten Ventures lead
+- [Bittensor Taoflow upgrade, November 2025](https://docs.learnbittensor.org/dynamic-tao/dtao-faq)
+- [Bittensor subnet structure](https://docs.taostats.io/docs/subnet) — 256 UIDs, 64 validator + 192 miner slots
+- [Perryman Group, Winter Storm Uri estimate, 2021](https://www.perrymangroup.com/publications/column/2021/03/01/the-freeze/) — $195–295B economic damage range
 
 ## Appendix: scoring pseudocode
 
