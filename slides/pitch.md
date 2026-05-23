@@ -348,7 +348,7 @@ Demand is one side. Supply is the other — and supply runs through chokepoints.
 <div class="card">
 <div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>Climate volatility</div>
 <strong>Extreme weather hits weekly.</strong>
-<div class="note">Texas freeze 2021 = $130B economic damage. Each event = forecast-value spike.</div>
+<div class="note">Texas freeze 2021: ~$130B economic damage (Perryman Group). Each event spikes forecast value.</div>
 </div>
 </div>
 
@@ -627,7 +627,9 @@ Compute + data-feed fees self-bankrupt fakes.
 
 ---
 
-## A real scoring round
+## What a scoring round looks like
+
+<div class="kicker">Sample · illustrative data</div>
 
 ```
 ERCOT day-ahead LMP · tempo 1284 · 2026-09-14 18:24 CDT
@@ -714,6 +716,100 @@ Public grid data. No human DAO. No LLM judge. No off-chain attestation.
 
 ---
 
+## Where we are today
+
+<div class="kicker">Status</div>
+
+<div class="cols-3">
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mechanism spec</div>
+<strong>Frozen v0.2</strong>
+<div class="note">8 attacks mapped to defenses. Yuma v3 + Taoflow parameters chosen.</div>
+</div>
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Public docs</div>
+<strong>Proposal + deck + site</strong>
+<div class="note">Open-source repo, deployed landing page, pitch deck shipped.</div>
+</div>
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Repo</div>
+<strong>github.com/edwardtay/bittensor-flux</strong>
+<div class="note">MIT-licensed. Mechanism design fully documented.</div>
+</div>
+<div class="card" style="border-left-color:#d9a440;">
+<div class="label" style="color:#d9a440;"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Reference miner</div>
+<strong>Next</strong>
+<div class="note">XGBoost on public ERCOT + weather + gas features.</div>
+</div>
+<div class="card" style="border-left-color:#d9a440;">
+<div class="label" style="color:#d9a440;"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Backtest</div>
+<strong>Pre-launch gate</strong>
+<div class="note">30 days of ERCOT history. Must beat naive baseline by 20%.</div>
+</div>
+<div class="card" style="border-left-color:#d9a440;">
+<div class="label" style="color:#d9a440;"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Subnet registration</div>
+<strong>Q3 2026 target</strong>
+<div class="note">After backtest pass and team formation.</div>
+</div>
+</div>
+
+<div class="sub" style="text-align:center; margin-top: 0.4em; color:#888;">Honest status: design phase. Code, customers, and on-chain registration are next.</div>
+
+---
+
+## Milestones
+
+<div class="kicker">Next 18 months</div>
+
+<svg viewBox="0 0 800 220" style="width:100%; height:auto;">
+  <!-- timeline base -->
+  <line x1="60" y1="120" x2="760" y2="120" stroke="#0a4d68" stroke-width="2"/>
+  <!-- ticks -->
+  <g>
+    <circle cx="120" cy="120" r="8" fill="#0a4d68"/>
+    <circle cx="280" cy="120" r="8" fill="#0a4d68"/>
+    <circle cx="440" cy="120" r="8" fill="#088395"/>
+    <circle cx="600" cy="120" r="8" fill="#088395"/>
+    <circle cx="730" cy="120" r="8" fill="white" stroke="#088395" stroke-width="2.5"/>
+  </g>
+  <!-- top labels -->
+  <g font-size="11" fill="#0a4d68" font-weight="700" text-anchor="middle" letter-spacing="0.08em">
+    <text x="120" y="60">NOW</text>
+    <text x="280" y="60">Q3 2026</text>
+    <text x="440" y="60">Q4 2026</text>
+    <text x="600" y="60">Q1 2027</text>
+    <text x="730" y="60">2027+</text>
+  </g>
+  <!-- detail -->
+  <g font-size="11" fill="#444" text-anchor="middle">
+    <text x="120" y="80">Spec frozen</text>
+    <text x="120" y="95">Backtest running</text>
+
+    <text x="280" y="80">Subnet registered</text>
+    <text x="280" y="95">20 LOI customers</text>
+
+    <text x="440" y="155">CAISO + PJM added</text>
+    <text x="440" y="170">First $10k/mo enterprise</text>
+
+    <text x="600" y="155">ENTSO-E (Europe)</text>
+    <text x="600" y="170">$1M MRR target</text>
+
+    <text x="730" y="155">Gas · LNG · refined</text>
+    <text x="730" y="170">Commodities expansion</text>
+  </g>
+  <!-- vertical separators -->
+  <g stroke="#cdd5cd" stroke-dasharray="2,3">
+    <line x1="200" y1="40" x2="200" y2="200"/>
+    <line x1="360" y1="40" x2="360" y2="200"/>
+    <line x1="520" y1="40" x2="520" y2="200"/>
+    <line x1="665" y1="40" x2="665" y2="200"/>
+  </g>
+</svg>
+
+<div class="sub" style="text-align:center; margin-top: 0.4em;"><strong>Gate test:</strong> if competitive miners do not beat the naive baseline by 20% in backtest, we do not ship.</div>
+
+---
+
 ## Subnet creation
 
 ```bash
@@ -733,36 +829,66 @@ Every value above defends a named attack. Spec frozen against Yuma v3 + Taoflow 
 
 ---
 
-## Why Flux
+## The competitive landscape
 
-<div class="vs">
-<div class="a">
-<div class="head">Modo Energy</div>
-<div class="body">
-£25M Series B · Dec 2025<br>
-<strong>Single proprietary model</strong><br>
-Quarterly valuations<br>
-Electrification assets only
-</div>
-</div>
-<div class="mid">VS</div>
-<div class="b">
-<div class="head">Flux</div>
-<div class="body">
-Open-competition subnet<br>
-<strong>Many competing models</strong><br>
-Live forecasts every 72 min<br>
-All energy commodities
-</div>
-</div>
-</div>
+<div class="kicker">Where Flux sits</div>
 
-| Axis | Position |
-|---|---|
-| **Product** | Three priced tiers · existing customer budgets · $15–30M ARR path |
-| **Organization** | Open competition · zero DAO bootstrap risk |
-| **Verification** | Public grid data only · zero humans in scoring loop |
-| **Game-theory** | Eight named defenses · each maps to a hyperparameter or capital commitment |
+<svg viewBox="0 0 800 380" style="width:100%; height:auto;">
+  <!-- background quadrants -->
+  <rect x="80" y="30" width="340" height="160" fill="#f3f5f3"/>
+  <rect x="420" y="30" width="340" height="160" fill="#eef3f5"/>
+  <rect x="80" y="190" width="340" height="160" fill="#f5f5f3"/>
+  <rect x="420" y="190" width="340" height="160" fill="#f3f5f3"/>
+
+  <!-- axes -->
+  <line x1="80" y1="190" x2="760" y2="190" stroke="#888" stroke-width="1.5"/>
+  <line x1="420" y1="30" x2="420" y2="350" stroke="#888" stroke-width="1.5"/>
+
+  <!-- axis labels -->
+  <text x="80" y="20" font-size="11" fill="#0a4d68" font-weight="700" letter-spacing="0.1em">↑ MANY COMPETING MODELS</text>
+  <text x="80" y="375" font-size="11" fill="#888" font-weight="600" letter-spacing="0.1em">↓ SINGLE PROPRIETARY MODEL</text>
+  <text x="80" y="208" font-size="11" fill="#888" font-weight="600" letter-spacing="0.1em">← QUARTERLY · STATIC</text>
+  <text x="760" y="208" font-size="11" fill="#0a4d68" font-weight="700" letter-spacing="0.1em" text-anchor="end">REAL-TIME · LIVE →</text>
+
+  <!-- TOP-LEFT: many models, static -->
+  <text x="250" y="55" font-size="10" fill="#888" font-weight="600" text-anchor="middle" letter-spacing="0.08em">ACADEMIC · COMPETITIONS</text>
+  <g font-size="12" fill="#555">
+    <text x="250" y="90" text-anchor="middle">Kaggle energy challenges</text>
+    <text x="250" y="110" text-anchor="middle">ENTSO-E forecast competitions</text>
+    <text x="250" y="130" text-anchor="middle">Academic papers</text>
+  </g>
+  <text x="250" y="165" font-size="10" fill="#888" text-anchor="middle" font-style="italic">No commercial product</text>
+
+  <!-- TOP-RIGHT: many models, real-time — FLUX -->
+  <rect x="438" y="50" width="306" height="130" fill="#0a4d68" rx="6"/>
+  <text x="591" y="78" font-size="14" fill="#88c5d4" font-weight="700" text-anchor="middle" letter-spacing="0.15em">FLUX</text>
+  <text x="591" y="108" font-size="13" fill="white" font-weight="600" text-anchor="middle">Open-competition subnet</text>
+  <text x="591" y="130" font-size="12" fill="#b3d4dc" text-anchor="middle">Live forecasts every 72 min</text>
+  <text x="591" y="148" font-size="12" fill="#b3d4dc" text-anchor="middle">All energy commodities</text>
+  <text x="591" y="170" font-size="10.5" fill="#88c5d4" text-anchor="middle" font-style="italic">— empty quadrant —</text>
+
+  <!-- BOTTOM-LEFT: single model, static — incumbents -->
+  <text x="250" y="222" font-size="10" fill="#888" font-weight="600" text-anchor="middle" letter-spacing="0.08em">INCUMBENT VENDORS</text>
+  <g font-size="12" fill="#555">
+    <text x="250" y="250" text-anchor="middle"><tspan font-weight="600">Bloomberg NEF</tspan> — $50k+/seat</text>
+    <text x="250" y="270" text-anchor="middle"><tspan font-weight="600">Wood Mackenzie</tspan> — quarterly</text>
+    <text x="250" y="290" text-anchor="middle"><tspan font-weight="600">Modo Energy</tspan> — valuations</text>
+    <text x="250" y="310" text-anchor="middle"><tspan font-weight="600">Aurora Energy Research</tspan></text>
+  </g>
+  <text x="250" y="335" font-size="10" fill="#888" text-anchor="middle" font-style="italic">The market today</text>
+
+  <!-- BOTTOM-RIGHT: single model, real-time -->
+  <text x="591" y="222" font-size="10" fill="#888" font-weight="600" text-anchor="middle" letter-spacing="0.08em">REAL-TIME · SINGLE-VENDOR</text>
+  <g font-size="12" fill="#555">
+    <text x="591" y="250" text-anchor="middle"><tspan font-weight="600">Enverus</tspan> — oil/gas focus</text>
+    <text x="591" y="270" text-anchor="middle"><tspan font-weight="600">Yes Energy</tspan> — ISO data</text>
+    <text x="591" y="290" text-anchor="middle"><tspan font-weight="600">Genscape</tspan> — flow tracking</text>
+    <text x="591" y="310" text-anchor="middle"><tspan font-weight="600">In-house quant teams</tspan></text>
+  </g>
+  <text x="591" y="335" font-size="10" fill="#888" text-anchor="middle" font-style="italic">Locked behind single vendor</text>
+</svg>
+
+<div class="sub" style="text-align:center; margin-top: 0.4em;">Flux is the only quadrant combining <strong>many independent models</strong> with <strong>real-time scoring against public grid data</strong>.</div>
 
 ---
 
