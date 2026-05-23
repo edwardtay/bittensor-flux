@@ -22,11 +22,11 @@
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); }
   body {
-    font: 16px/1.65 'Inter', system-ui, -apple-system, sans-serif;
+    font: 17px/1.7 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--fg);
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 820px; margin: 0 auto; padding: 60px 24px 100px; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 60px 24px 100px; }
   .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 36px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
   .logo { display: flex; align-items: center; gap: 10px; }
   .logo-mark { width: 32px; height: 32px; border-radius: 7px; background: var(--brand); display: grid; place-items: center; }
@@ -35,22 +35,22 @@
   .label-private { font-size: 0.75em; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; color: var(--accent); padding: 4px 10px; border: 1px solid var(--accent); border-radius: 4px; }
   h1 { font-size: 2em; font-weight: 700; color: var(--brand); letter-spacing: -0.02em; margin: 0 0 6px; }
   .sub { color: var(--fg-2); margin: 0 0 36px; font-size: 1.05em; }
-  h2 { font-size: 1.05em; color: var(--brand); font-weight: 600; margin: 30px 0 8px; padding-top: 16px; border-top: 1px solid var(--border); display: flex; align-items: baseline; gap: 14px; }
-  h2 .time { color: var(--brand-2); font-family: 'JetBrains Mono', monospace; font-size: 0.85em; font-weight: 500; }
-  h2 .duration { color: var(--muted); font-size: 0.7em; font-weight: 400; margin-left: auto; }
+  h2 {
+    font-size: 1em;
+    color: var(--brand);
+    font-weight: 600;
+    margin: 36px 0 10px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+  h2 .time { color: var(--brand-2); font-family: 'JetBrains Mono', monospace; font-size: 0.9em; font-weight: 500; }
+  h2 .duration { color: var(--muted); font-size: 0.75em; font-weight: 400; margin-left: auto; }
   .slide-num { display: inline-block; background: var(--brand); color: white; min-width: 22px; height: 22px; border-radius: 50%; text-align: center; line-height: 22px; font-size: 0.75em; font-weight: 700; margin-right: 8px; vertical-align: 2px; padding: 0 6px; }
-  p { margin: 8px 0; }
-  .speak { color: var(--fg); }
-  .speak strong { color: var(--brand); font-weight: 700; }
-  .cue { color: var(--fg-2); font-size: 0.9em; font-style: italic; margin-top: 4px; padding-left: 14px; border-left: 2px solid var(--brand-2); }
-  .pron { color: var(--muted); font-size: 0.85em; font-family: 'JetBrains Mono', monospace; }
-  .glossary { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 18px 22px; margin: 24px 0; }
-  .glossary h3 { margin: 0 0 10px; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand); font-weight: 600; }
-  .glossary table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
-  .glossary td { padding: 5px 0; vertical-align: top; }
-  .glossary td:first-child { font-weight: 600; color: var(--brand); white-space: nowrap; padding-right: 14px; width: 1%; }
-  .glossary td:nth-child(2) { font-family: 'JetBrains Mono', monospace; color: var(--muted); padding-right: 14px; white-space: nowrap; width: 1%; }
-  .glossary td:last-child { color: var(--fg-2); }
+  p { margin: 10px 0; color: var(--fg); }
+  p strong { color: var(--brand); font-weight: 700; }
   .summary {
     background: white;
     border: 1px solid var(--border);
@@ -64,7 +64,6 @@
   .qa-block { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 18px 22px; margin: 14px 0; }
   .qa-block .q { font-weight: 600; color: var(--brand); margin: 0 0 6px; }
   .qa-block .a { color: var(--fg-2); margin: 0; font-size: 0.95em; }
-  code { font-family: 'JetBrains Mono', monospace; background: #ecefe8; color: var(--brand); padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
   .nav-back { color: var(--brand-2); font-size: 0.9em; }
 </style>
 </head>
@@ -80,136 +79,85 @@
 </div>
 
 <h1>Pitch script</h1>
-<p class="sub">Per-slide spoken text and stage cues. Read the bold spoken text. Italics are body language.</p>
+<p class="sub">Just the spoken text per slide.</p>
 
 <div class="summary">
 <h3>Pacing</h3>
-<p>16 slides, target 480 seconds. Land at 7:45 with 15 seconds of pause for the close. Weight hook slides longer. Mechanism slides should move.</p>
-</div>
-
-<div class="glossary">
-<h3>Acronyms · say them right</h3>
-<table>
-<tr><td>Bittensor</td><td class="pron">BIT-en-sor</td><td>The decentralized AI network we build on. Token: TAO ("dow" or "tay-oh").</td></tr>
-<tr><td>ERCOT</td><td class="pron">ER-cot</td><td>Electric Reliability Council of Texas. The Texas grid operator. Run this market alone, isolated from the rest of the US.</td></tr>
-<tr><td>LMP</td><td class="pron">L M P</td><td>Locational marginal price. The wholesale price of electricity at a specific point on the grid, settled every 5 minutes or hourly.</td></tr>
-<tr><td>ISO</td><td class="pron">I S O</td><td>Independent System Operator. The entity running a regional grid (ERCOT, CAISO, PJM).</td></tr>
-<tr><td>CAISO</td><td class="pron">KAI-so</td><td>California ISO. California's grid operator.</td></tr>
-<tr><td>PJM</td><td class="pron">P J M</td><td>The 13-state mid-Atlantic grid operator. Largest in North America.</td></tr>
-<tr><td>ENTSO-E</td><td class="pron">EN-tsoh-EE</td><td>European Network of Transmission System Operators for Electricity. Europe's coordinating body.</td></tr>
-<tr><td>IEA</td><td class="pron">I E A</td><td>International Energy Agency. Paris-based, the authoritative source for global energy statistics.</td></tr>
-<tr><td>EIA</td><td class="pron">E I A</td><td>US Energy Information Administration. American counterpart to the IEA.</td></tr>
-<tr><td>LTLF3</td><td class="pron">L T L F three</td><td>Long-Term Load Forecast version 3. ERCOT's official 2025 forecast methodology.</td></tr>
-<tr><td>LNG</td><td class="pron">L N G</td><td>Liquefied natural gas.</td></tr>
-<tr><td>AIS</td><td class="pron">A I S</td><td>Automatic Identification System. Public shipping-tracking data, used to track LNG cargo flows.</td></tr>
-<tr><td>CRPS</td><td class="pron">C R P S</td><td>Continuous Ranked Probability Score. A scoring rule for probabilistic forecasts. Rewards honest uncertainty.</td></tr>
-<tr><td>MSE</td><td class="pron">M S E</td><td>Mean squared error. The standard accuracy measure for point forecasts.</td></tr>
-<tr><td>Yuma</td><td class="pron">YOO-ma</td><td>Bittensor's consensus algorithm. Currently version 3.</td></tr>
-<tr><td>Taoflow</td><td class="pron">TAY-oh-flow</td><td>The November 2025 upgrade to Bittensor's emission mechanism. Emissions follow net stake inflows, not token price.</td></tr>
-<tr><td>dTAO</td><td class="pron">d-TAY-oh</td><td>Dynamic TAO. The February 2025 upgrade that introduced per-subnet Alpha tokens.</td></tr>
-<tr><td>Sybil</td><td class="pron">SIB-il</td><td>An attack where one actor pretends to be many. Named after the Sybil case study in psychiatry.</td></tr>
-<tr><td>UID</td><td class="pron">U I D</td><td>Unique identifier. A slot in a Bittensor subnet. Each subnet has 256 of them.</td></tr>
-<tr><td>XGBoost</td><td class="pron">EX-G-boost</td><td>Gradient-boosting library. The standard baseline for tabular forecasting.</td></tr>
-<tr><td>Modo</td><td class="pron">MO-do</td><td>Modo Energy. UK-based energy-intelligence company. Closest peer competitor.</td></tr>
-<tr><td>Enverus</td><td class="pron">EN-ver-us</td><td>US-based energy-data giant. Oil and gas focus. Real-time but proprietary.</td></tr>
-<tr><td>Bloomberg NEF</td><td class="pron">N E F</td><td>Bloomberg New Energy Finance. The incumbent benchmark publisher.</td></tr>
-<tr><td>RWA</td><td class="pron">R W A</td><td>Real-world assets. On-chain tokenization of physical assets.</td></tr>
-<tr><td>API</td><td class="pron">A P I</td><td>Application programming interface. How software talks to other software.</td></tr>
-<tr><td>ARR</td><td class="pron">A R R</td><td>Annual recurring revenue. The annualized run-rate of subscription revenue.</td></tr>
-<tr><td>LOI</td><td class="pron">L O I</td><td>Letter of intent. A non-binding signal that a customer plans to buy.</td></tr>
-<tr><td>IPP</td><td class="pron">I P P</td><td>Independent Power Producer. A company that owns and operates power plants but is not the grid operator.</td></tr>
-</table>
+<p>16 slides, target 480 seconds. Land at 7:45 with 15 seconds for the close.</p>
 </div>
 
 <h2><span class="time">0:00 to 0:20</span><span><span class="slide-num">1</span>Title</span><span class="duration">20s</span></h2>
-<p class="speak"><strong>"Flux is a marketplace for energy forecasts, built on Bittensor."</strong></p>
-<p class="speak">"Many competing models. One unarguable source of truth."</p>
-<p class="cue">Open with stillness. Let the title sit. Two short sentences only. Do not introduce yourself.</p>
+<p><strong>Flux is a marketplace for energy forecasts, built on Bittensor.</strong></p>
+<p>Many competing models. One unarguable source of truth.</p>
 
 <h2><span class="time">0:20 to 1:20</span><span><span class="slide-num">2</span>AI is the largest energy story of our lifetime</span><span class="duration">60s</span></h2>
-<p class="speak">"By 2030, data centers will use more electricity than Japan."</p>
-<p class="speak">"This is the IEA's projection. <strong>Doubling in five years.</strong> From 415 terawatt-hours to 945."</p>
-<p class="speak">"And it is not just AI. Global power demand grows near 4 percent every year through 2027. Electric vehicles, electrified industry, cooling load. All compounding at once."</p>
-<p class="cue">Point at the 2030 bar. Pause after "doubling in five years." The chart is doing the talking.</p>
+<p>By 2030, data centers will use more electricity than Japan.</p>
+<p>This is from the International Energy Agency. <strong>Doubling in five years.</strong> From 415 terawatt-hours to 945.</p>
+<p>And it is not just AI. Global power demand grows near 4 percent every year through 2027. Electric vehicles, electrified industry, cooling load. All compounding at once.</p>
 
 <h2><span class="time">1:20 to 2:05</span><span><span class="slide-num">3</span>Geopolitics rewires the grid</span><span class="duration">45s</span></h2>
-<p class="speak">"That is the demand side. Supply is the other half, and supply runs through chokepoints."</p>
-<p class="speak">"Strait of Hormuz. Russia and Ukraine. Red Sea shipping. Panama drought. Climate volatility. Every one of these can reshape global power markets in days."</p>
-<p class="speak"><strong>"Demand is exploding. Supply is fragile. Prices move in minutes."</strong></p>
-<p class="cue">Look up from the slide on the last line. Three short stabs, with weight on "minutes."</p>
+<p>That is the demand side. Supply is the other half, and supply runs through chokepoints.</p>
+<p>The Strait of Hormuz. Russia and Ukraine. Red Sea shipping. The Panama drought. Climate volatility. Every one of these can reshape global power markets in days.</p>
+<p><strong>Demand is exploding. Supply is fragile. Prices move in minutes.</strong></p>
 
 <h2><span class="time">2:05 to 2:35</span><span><span class="slide-num">4</span>Forecasts are stuck in the past</span><span class="duration">30s</span></h2>
-<p class="speak">"Yet today's energy intelligence comes from a handful of consulting firms."</p>
-<p class="speak"><strong>"One firm. One model. One opinion. PDFs. Quarterly. 300 thousand dollars a seat."</strong></p>
-<p class="speak">"The market moves every 5 minutes. Traders are flying blind."</p>
-<p class="cue">Snap cadence. Three fingers go up on "one firm, one model, one opinion."</p>
+<p>Yet today's energy intelligence comes from a handful of consulting firms.</p>
+<p><strong>One firm. One model. One opinion. Quarterly reports. Three hundred thousand dollars a seat.</strong></p>
+<p>The market moves every five minutes. Traders are flying blind.</p>
 
 <h2><span class="time">2:35 to 3:20</span><span><span class="slide-num">5</span>That's what Flux is</span><span class="duration">45s</span></h2>
-<p class="speak">"Flux is a marketplace for energy forecasts."</p>
-<p class="speak"><strong>"Anyone can submit. Quants. Researchers. Universities.</strong> Public grid data resolves who was right, automatically. Customers buy the top-ranked outputs. The network rewards winners on-chain."</p>
-<p class="speak">"No single vendor. No proprietary black box. No quarterly delay."</p>
-<p class="cue">Read the four cards left to right, top to bottom. Quick, rhythmic.</p>
+<p>Flux is a marketplace for energy forecasts.</p>
+<p><strong>Anyone can submit. Quants. Researchers. Universities.</strong> Public grid data resolves who was right, automatically. Customers buy the top-ranked outputs. The network rewards winners on-chain.</p>
+<p>No single vendor. No proprietary black box. No quarterly delay.</p>
 
 <h2><span class="time">3:20 to 4:05</span><span><span class="slide-num">6</span>Who pays</span><span class="duration">45s</span></h2>
-<p class="speak">"Three customer tiers. Crypto-native quant funds at 60 thousand dollars a year. Trading desks at 300 thousand. Enterprise utilities and data-center operators at 1.2 million plus."</p>
-<p class="speak"><strong>"Three-year ARR target: 15 to 30 million dollars across validators."</strong></p>
-<p class="speak">"Our wedge is crypto-native energy desks. They already trust Bittensor. They already trade ERCOT. They are underserved by Bloomberg and Modo. That wedge funds the first 18 months."</p>
-<p class="cue">This is the slide investors care about. Slow down on the dollar numbers. Eye contact, not slide.</p>
+<p>Three customer tiers. Crypto-native quant funds at sixty thousand dollars a year. Trading desks at three hundred thousand. Enterprise utilities and data-center operators at one point two million and up.</p>
+<p><strong>Three-year revenue target: fifteen to thirty million dollars in annual recurring revenue across validators.</strong></p>
+<p>Our wedge is crypto-native energy desks. They already trust Bittensor. They already trade the Texas power market. They are underserved by Bloomberg and by Modo. That wedge funds the first eighteen months.</p>
 
 <h2><span class="time">4:05 to 4:35</span><span><span class="slide-num">7</span>Why this works on Bittensor</span><span class="duration">30s</span></h2>
-<p class="speak">"Every decentralized AI subnet has the same hard question. <strong>Who decides who is right?</strong>"</p>
-<p class="speak">"Flux's answer: the grid does. ERCOT publishes the realized price. Your forecast matched, or it did not. Public data. Deterministic. Final."</p>
-<p class="cue">Intellectual core of the pitch. Slow it down. This is the line Bittensor judges lock onto.</p>
+<p>Every decentralized AI subnet has the same hard question. <strong>Who decides who is right?</strong></p>
+<p>Flux's answer: the grid does. The Texas grid operator publishes the realized price. Your forecast matched, or it did not. Public data. Deterministic. Final.</p>
 
 <h2><span class="time">4:35 to 5:05</span><span><span class="slide-num">8</span>v1, day-ahead power prices</span><span class="duration">30s</span></h2>
-<p class="speak">"We start with one market. ERCOT day-ahead power."</p>
-<p class="speak">"94 gigawatts today. <strong>208 gigawatts by 2030</strong> in the official high case."</p>
-<p class="speak">"Open data. Highest volatility in the United States. Weak public baseline, easy first 20 percent beat. And crypto-native traders are already there."</p>
-<p class="cue">Trace the line on the chart with a finger. The doubling slope is the story.</p>
+<p>We start with one market. Day-ahead wholesale power in Texas.</p>
+<p>Ninety-four gigawatts today. <strong>Two hundred and eight gigawatts by 2030</strong> in the official high case.</p>
+<p>Open data. Highest price volatility in the United States. Weak public baseline, so easy first twenty percent beat. And crypto-native traders are already there.</p>
 
 <h2><span class="time">5:05 to 5:35</span><span><span class="slide-num">9</span>What miners do</span><span class="duration">30s</span></h2>
-<p class="speak">"Miners submit probabilistic forecasts across four horizons. 5 minutes ahead, 1 hour, 24 hours, and 1 week."</p>
-<p class="speak">"Forecasts are sealed cryptographically before each window opens. <strong>No miner can copy another before submitting.</strong>"</p>
-<p class="speak">"The reference model is XGBoost on public data. Fork it, improve it, compete."</p>
-<p class="cue">Do not dwell. The audience trusts you have a model.</p>
+<p>Miners submit probabilistic forecasts across four horizons. Five minutes ahead, one hour, twenty-four hours, and one week.</p>
+<p>Forecasts are sealed cryptographically before each window opens. <strong>No miner can copy another before submitting.</strong></p>
+<p>The reference model is a gradient-boosting tree on public data. Fork it, improve it, compete.</p>
 
 <h2><span class="time">5:35 to 6:05</span><span><span class="slide-num">10</span>What validators do</span><span class="duration">30s</span></h2>
-<p class="speak">"Every 72 minutes, validators pull realized prices from ERCOT's public API."</p>
-<p class="speak">"They score every miner on three signals. <strong>Skill, calibration, and breadth across horizons.</strong>"</p>
-<p class="speak">"They commit-reveal their weights on-chain, then serve the best forecasts via enterprise API. 5 thousand to 100 thousand dollars per month per customer."</p>
-<p class="cue">Three signals, three fingers. Then point at the API revenue line.</p>
+<p>Every seventy-two minutes, validators pull realized prices from the Texas grid's public data feed.</p>
+<p>They score every miner on three signals. <strong>Skill, calibration, and breadth across horizons.</strong></p>
+<p>They commit and then reveal their weights on-chain, then serve the best forecasts to enterprise customers. Five thousand to one hundred thousand dollars per month per customer.</p>
 
 <h2><span class="time">6:05 to 6:20</span><span><span class="slide-num">11</span>What a scoring round looks like</span><span class="duration">15s</span></h2>
-<p class="speak">"Here is what a scoring round will look like. Four miners. Three signals. The top quant scores 0.74. The one below the naive baseline gets <strong>zeroed automatically</strong>."</p>
-<p class="speak">"No humans involved."</p>
-<p class="cue">Point at uid 2, the zeroed row. Note: this is illustrative output, not yet a live run. Be ready if anyone asks.</p>
+<p>Here is what a scoring round will look like. Four miners. Three signals. The top quant scores zero point seven four. The one below the naive baseline gets <strong>zeroed automatically</strong>.</p>
+<p>No humans involved.</p>
 
 <h2><span class="time">6:20 to 6:55</span><span><span class="slide-num">12</span>Eight attacks, eight defenses</span><span class="duration">35s</span></h2>
-<p class="speak">"This is where most subnets break. Weight copying. Forecast copying. Validator cabals. Single-miner pumps. Baseline gaming. Sybil floods. Bond whipsaw. And the existential one: <strong>flow-emission spirals under Taoflow</strong>."</p>
-<p class="speak">"Every attack maps to one specific hyperparameter or capital commitment. No human dependency anywhere. We have thought through all of them."</p>
-<p class="cue">Do not read line by line. Skim the attack names. Land on "no human dependency anywhere."</p>
+<p>This is where most subnets break. Weight copying. Forecast copying. Validator cabals. Single-miner pumps. Baseline gaming. Sybil floods. Bond whipsaw. And the existential one: <strong>flow-emission death spirals under the new Taoflow mechanism</strong>.</p>
+<p>Every attack maps to one specific hyperparameter or capital commitment. No human dependency anywhere.</p>
 
 <h2><span class="time">6:55 to 7:10</span><span><span class="slide-num">13</span>How the system fits together</span><span class="duration">15s</span></h2>
-<p class="speak">"Closed loop. Better forecasts mean more API revenue, which means larger emissions, which attracts better forecasters."</p>
-<p class="cue">Trace the loop with your hand. Move on.</p>
+<p>Closed loop. Better forecasts mean more revenue from enterprise customers, which means larger emissions, which attracts better forecasters.</p>
 
 <h2><span class="time">7:10 to 7:25</span><span><span class="slide-num">14</span>Where we are today</span><span class="duration">15s</span></h2>
-<p class="speak">"Mechanism spec is frozen. Proposal, deck, and site are shipped. Repository is public on GitHub."</p>
-<p class="speak">"Next: reference miner, then backtest, then subnet registration in Q3."</p>
-<p class="cue">Be straight. Design phase. We are not pretending to have code yet. The honesty is the credibility.</p>
+<p>The mechanism specification is frozen. Proposal, deck, and site are shipped. The repository is public on GitHub.</p>
+<p>Next: the reference miner, then a backtest, then subnet registration in the third quarter.</p>
 
 <h2><span class="time">7:25 to 7:40</span><span><span class="slide-num">15</span>Milestones</span><span class="duration">15s</span></h2>
-<p class="speak">"Q3, subnet registered. Q4, CAISO and PJM added, first 10-thousand-a-month enterprise customer. Q1 next year, Europe via ENTSO-E. <strong>1 million in monthly recurring revenue by Q1 2027.</strong>"</p>
-<p class="cue">Sweep finger left to right across the timeline. Pause on the Q1 2027 number.</p>
+<p>Third quarter, subnet registered. Fourth quarter, California and the mid-Atlantic grid added, first ten-thousand-a-month enterprise customer. First quarter next year, Europe through the European grid operators. <strong>One million in monthly recurring revenue by the first quarter of 2027.</strong></p>
 
 <h2><span class="time">7:40 to 7:55</span><span><span class="slide-num">16</span>The competitive landscape</span><span class="duration">15s</span></h2>
-<p class="speak">"Here is the competitive map. Bloomberg and Modo sell quarterly reports. Enverus and Yes Energy are real-time but single-vendor."</p>
-<p class="speak"><strong>"Flux is the only quadrant that combines many independent models with real-time scoring against public grid data."</strong></p>
-<p class="cue">Sweep across the quadrants. Land on the top-right Flux box.</p>
+<p>Here is the competitive map. Bloomberg and Modo sell quarterly reports. Enverus and Yes Energy are real-time but single-vendor.</p>
+<p><strong>Flux is the only quadrant that combines many independent models with real-time scoring against public grid data.</strong></p>
 
 <h2><span class="time">7:55 to 8:00</span><span><span class="slide-num">17</span>Close</span><span class="duration">5s</span></h2>
-<p class="speak"><strong>"Flux. Real-time energy intelligence. Bittensor-native. Thank you."</strong></p>
-<p class="cue">Stop. Do not fill. Wait for questions.</p>
+<p><strong>Flux. Real-time energy intelligence. Native to Bittensor. Thank you.</strong></p>
 
 <hr>
 
@@ -222,7 +170,7 @@
 
 <div class="qa-block">
 <p class="q">What happens if Bittensor's economics change again?</p>
-<p class="a">We have designed for Taoflow's flow-based emission risk. 1 million dollar owner pre-fund plus 20 percent API revenue redirect during low-emission periods. Stickier with 6-month staker incentives. The subnet survives a quarter of negative flow without miner exodus.</p>
+<p class="a">We have designed for the new Taoflow flow-based emission risk. One million dollar owner pre-fund plus 20 percent revenue redirect during low-emission periods. Stickier with six-month staker incentives. The subnet survives a quarter of negative flow without miner exodus.</p>
 </div>
 
 <div class="qa-block">
@@ -232,17 +180,17 @@
 
 <div class="qa-block">
 <p class="q">What if miners cannot beat the naive baseline?</p>
-<p class="a">Then the mechanism is wrong and we kill it. This is one of our three six-month gate tests. We test before launch on 30 days of ERCOT data. If competitive miners cannot beat yesterday plus seasonal by 20 percent, we do not ship.</p>
+<p class="a">Then the mechanism is wrong and we kill it. This is one of our three six-month gate tests. We test before launch on 30 days of Texas grid data. If competitive miners cannot beat yesterday plus seasonal by 20 percent, we do not ship.</p>
 </div>
 
 <div class="qa-block">
-<p class="q">Why ERCOT first and not CAISO or PJM?</p>
-<p class="a">Three reasons. Highest LMP volatility in the United States, so biggest forecast value. Fully open data API, so validators score for free. And it is the grid with the biggest AI-data-center repricing story. The narrative that closes meetings.</p>
+<p class="q">Why Texas first and not California or the mid-Atlantic?</p>
+<p class="a">Three reasons. Highest wholesale-price volatility in the United States, so biggest forecast value. Fully open data, so validators score for free. And it is the grid with the biggest AI-data-center repricing story. The narrative that closes meetings.</p>
 </div>
 
 <div class="qa-block">
 <p class="q">How big can this actually get?</p>
-<p class="a">Realistically, 50 to 150 million dollars enterprise value over 5 years. Not a unicorn play. The ceiling is real. 256 UID cap, single vertical, Modo will eventually expand. But it is a real 15 to 30 million ARR business that compounds.</p>
+<p class="a">Realistically, 50 to 150 million dollars enterprise value over five years. Not a unicorn play. The ceiling is real. 256 slot cap per subnet, single vertical, Modo will eventually expand. But it is a real fifteen to thirty million annual recurring revenue business that compounds.</p>
 </div>
 
 <hr>
