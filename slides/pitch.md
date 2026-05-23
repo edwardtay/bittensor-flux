@@ -253,14 +253,10 @@ style: |
 
 ## <span class="zh-h">能源正成为世界的焦点</span><span class="en-h">Energy is becoming the world's focus</span>
 
-<div class="kicker">问题 · The problem</div>
+<p class="huge" style="margin:0.1em 0;">到 2030 年,数据中心将消耗全球 3% 的电力。</p>
+<p style="font-size:0.85em; color:#888; margin-top:-8px;">By 2030, data centers will draw 3% of the world's electricity. <span style="color:#0a4d68; font-weight:600;">谁先看到下一个价格,谁就赢。</span></p>
 
-<p class="huge">到 2030 年,数据中心将消耗<br>全球 3% 的电力。</p>
-<p style="font-size:0.85em; color:#888; text-align:center; margin-top:-12px;">By 2030, data centers will draw 3% of the world's electricity.</p>
-
-<p style="font-size:1em; color:#555; margin-top:8px;"><span class="zh">人工智能是我们这一代最大的能源故事。需求爆炸,供给脆弱。</span><strong style="color:#0a4d68;">谁先看到下一个价格,谁就赢。</strong></p>
-
-<div class="cols" style="grid-template-columns: 1.4fr 1fr; align-items: center;">
+<div class="cols" style="grid-template-columns: 1.5fr 1fr; align-items: center;">
 <div>
 
 <svg viewBox="0 0 460 220" style="width:100%; height:auto;">
@@ -314,7 +310,7 @@ style: |
   </g>
   <!-- annotation -->
   <line x1="400" y1="22" x2="400" y2="14" stroke="#088395" stroke-width="1"/>
-  <text x="395" y="11" font-size="9.5" fill="#088395" font-weight="600" text-anchor="end">~Japan total</text>
+  <text x="395" y="11" font-size="9.5" fill="#088395" font-weight="600" text-anchor="end">3% of global</text>
 </svg>
 
 <div class="sub" style="font-size:0.7em; text-align:right; margin-top:-4px;">Source: IEA, <em>Energy and AI</em>, April 2025</div>
@@ -331,49 +327,37 @@ style: |
 <div class="value">~4% / yr</div>
 <div class="note">through 2027 (IEA)</div>
 </div>
-<div class="card" style="margin-top:8px; border-left-color:#c43d3d;">
-<div class="label" style="color:#c43d3d;"><svg class="icon" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Supply shocks</div>
-<div class="value" style="color:#c43d3d; font-size:1.1em;">Hormuz · Ukraine · LNG</div>
-<div class="note">Geopolitics rewires energy flows in days</div>
 </div>
 </div>
-</div>
-
-> Demand is exploding. Supply is fragile. Prices move in minutes. **See it first or go bankrupt.**
 
 ---
 
 ## <span class="zh-h">地缘政治重塑电网</span><span class="en-h">Geopolitics rewires the grid</span>
 
-<div class="kicker">供给端 · The other half</div>
-
-<span class="zh">需求是一面。供给是另一面 —— 而供给穿过一个个咽喉要道。</span>
-<span class="en-sub">Demand is one side. Supply is the other, and supply runs through chokepoints.</span>
+<p style="margin: 0.2em 0 0.4em; font-size:0.95em;"><span class="zh">需求是一面。供给是另一面 —— 穿过一个个咽喉要道。</span></p>
 
 <div class="cols">
 <div class="card">
 <div class="label"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19c4-3 12-3 16 0"/><path d="M4 13c4-3 12-3 16 0"/><path d="M4 7c4-3 12-3 16 0"/></svg>Strait of Hormuz</div>
 <strong>20% of world's oil. 20% of LNG.</strong>
-<div class="note">Iran tensions → freight rates 3× in 48h. Power-gas spreads blow out.</div>
+<div class="note">Tensions spike freight 3× in 48h. Spreads blow out.</div>
 </div>
 <div class="card">
 <div class="label"><svg class="icon" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>Russia–Ukraine</div>
 <strong>European gas permanently restructured.</strong>
-<div class="note">Pipeline → LNG cargo. Every disruption ripples to ERCOT and CAISO via global gas pricing.</div>
+<div class="note">Pipeline → LNG. Every disruption ripples to US power markets.</div>
 </div>
 <div class="card">
 <div class="label"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Red Sea · Panama · Suez</div>
 <strong>Shipping chokepoints multiply.</strong>
-<div class="note">Houthi attacks reroute LNG carriers. Panama drought cuts canal capacity. Suez incidents ripple global freight.</div>
+<div class="note">Red Sea reroutes LNG. Panama drought cuts capacity. Freight ripples globally.</div>
 </div>
 <div class="card">
 <div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>Climate volatility</div>
 <strong>Extreme weather hits weekly.</strong>
-<div class="note">Texas freeze 2021: up to $295B economic damage (Perryman Group). Each event spikes forecast value.</div>
+<div class="note">Texas freeze 2021: up to $295B damage (Perryman Group).</div>
 </div>
 </div>
-
-> Quarterly PDFs cannot price a world that resets every week.
 
 ---
 
@@ -740,42 +724,28 @@ Public grid data. No human DAO. No LLM judge. No off-chain attestation.
 
 ## <span class="zh-h">当前进度</span><span class="en-h">Where we are today</span>
 
-<div class="kicker">Status</div>
-
-<div class="cols-3">
+<div class="cols">
 <div class="card">
-<div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Mechanism spec</div>
-<strong>Frozen v0.2</strong>
-<div class="note">8 attacks mapped to defenses. Yuma v3 + Taoflow parameters chosen.</div>
-</div>
-<div class="card">
-<div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Public docs</div>
-<strong>Proposal + deck + site</strong>
-<div class="note">Open-source repo, deployed landing page, pitch deck shipped.</div>
-</div>
-<div class="card">
-<div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Repo</div>
-<strong>github.com/edwardtay/bittensor-flux</strong>
-<div class="note">MIT-licensed. Mechanism design fully documented.</div>
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>已完成 · Done</div>
+<ul style="margin:6px 0; padding-left:18px; line-height:1.55;">
+<li>Mechanism spec v0.4 frozen</li>
+<li>Proposal + bilingual deck + landing site</li>
+<li>Open-source repo (MIT)</li>
+<li>8 attacks mapped to defenses</li>
+</ul>
 </div>
 <div class="card" style="border-left-color:#d9a440;">
-<div class="label" style="color:#d9a440;"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Reference miner</div>
-<strong>Next</strong>
-<div class="note">XGBoost on public ERCOT + weather + gas features.</div>
-</div>
-<div class="card" style="border-left-color:#d9a440;">
-<div class="label" style="color:#d9a440;"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Backtest</div>
-<strong>Pre-launch gate</strong>
-<div class="note">30 days of ERCOT history. Must beat naive baseline by 20%.</div>
-</div>
-<div class="card" style="border-left-color:#d9a440;">
-<div class="label" style="color:#d9a440;"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Subnet registration</div>
-<strong>Q3 2026 target</strong>
-<div class="note">After backtest pass and team formation.</div>
+<div class="label" style="color:#d9a440;"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>下一步 · Next</div>
+<ul style="margin:6px 0; padding-left:18px; line-height:1.55;">
+<li>Reference miner (XGBoost on public data)</li>
+<li>30-day backtest, must beat naive +20%</li>
+<li>Subnet registration on mainnet (Q3 target)</li>
+<li>First crypto-native pilot customers</li>
+</ul>
 </div>
 </div>
 
-<div class="sub" style="text-align:center; margin-top: 0.4em; color:#888;">Honest status: design phase. Code, customers, and on-chain registration are next.</div>
+<div class="sub" style="text-align:center; margin-top: 0.6em; color:#888;">Design phase, honest. Code and registration follow gate-test pass.</div>
 
 ---
 
