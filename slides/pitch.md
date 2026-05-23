@@ -341,14 +341,14 @@ Demand is one side. Supply is the other — and supply runs through chokepoints.
 <div class="note">Pipeline → LNG cargo. Every disruption ripples to ERCOT and CAISO via global gas pricing.</div>
 </div>
 <div class="card">
-<div class="label"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Red Sea · Taiwan · Panama</div>
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Red Sea · Panama · Suez</div>
 <strong>Shipping chokepoints multiply.</strong>
-<div class="note">Houthi attacks reroute LNG carriers. Drought slows Panama. China–Taiwan tensions sit over LNG flows.</div>
+<div class="note">Houthi attacks reroute LNG carriers. Panama drought cuts canal capacity. Suez incidents ripple global freight.</div>
 </div>
 <div class="card">
 <div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>Climate volatility</div>
 <strong>Extreme weather hits weekly.</strong>
-<div class="note">Texas freeze 2021: ~$130B economic damage (Perryman Group). Each event spikes forecast value.</div>
+<div class="note">Texas freeze 2021: up to $295B economic damage (Perryman Group). Each event spikes forecast value.</div>
 </div>
 </div>
 
@@ -870,7 +870,7 @@ Every value above defends a named attack. Spec frozen against Yuma v3 + Taoflow 
   <!-- BOTTOM-LEFT: single model, static — incumbents -->
   <text x="250" y="222" font-size="10" fill="#888" font-weight="600" text-anchor="middle" letter-spacing="0.08em">INCUMBENT VENDORS</text>
   <g font-size="12" fill="#555">
-    <text x="250" y="250" text-anchor="middle"><tspan font-weight="600">Bloomberg NEF</tspan> — $50k+/seat</text>
+    <text x="250" y="250" text-anchor="middle"><tspan font-weight="600">Bloomberg NEF</tspan> — premium seat</text>
     <text x="250" y="270" text-anchor="middle"><tspan font-weight="600">Wood Mackenzie</tspan> — quarterly</text>
     <text x="250" y="290" text-anchor="middle"><tspan font-weight="600">Modo Energy</tspan> — valuations</text>
     <text x="250" y="310" text-anchor="middle"><tspan font-weight="600">Aurora Energy Research</tspan></text>
