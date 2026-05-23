@@ -140,11 +140,9 @@ A market for forecasts. Many competing models. One unarguable source of truth.
 
 <div class="kicker">The setup</div>
 
-<p class="huge">Texas alone expects to <em>double</em> its electricity demand by 2030.</p>
+<p class="huge">Global electricity demand grew more in 2024 than in any year since WWII.</p>
 
-Not over 30 years. **Over 5.**
-
-Every major power grid — US, Europe, China — is repricing electricity in real time. Data centers, EVs, electrified industry, and air-conditioning load growth all compound at once.
+AI data centers, EVs, electrified industry, and cooling load are compounding at once. Every major grid — China, US, Europe, India — is repricing electricity in real time.
 
 <br>
 
@@ -210,21 +208,21 @@ The mechanism only works when validation is cheap, public, and unarguable. Power
 
 ---
 
-## v1 — Texas (ERCOT) day-ahead power prices
+## v1 — day-ahead power prices
 
 <div class="kicker">Where we start</div>
 
-One market, one product, prove the mechanism.
+One market, one product, prove the mechanism. Start with the grid whose demand is doubling fastest and whose data is fully open.
 
-| Property | Why Texas first |
+| Property | Why this market first |
 |---|---|
-| Largest demand shock | 94 GW today → **208 GW by 2030** (high case), or 139 GW after ERCOT's haircut |
-| Open public data | Free for validators to score |
-| Highest price volatility in US | Biggest absolute forecast value |
+| Largest single demand shock on record | 94 GW today → **208 GW by 2030** (official high-case forecast) |
+| Fully open public data | Validators score for free; no licensing risk |
+| Highest price volatility globally | Biggest absolute forecast value |
 | Weak public baseline | Easy first ≥20% improvement target |
-| Existing crypto-native traders | First customers wallet-aligned, easy to onboard |
+| Existing crypto-native traders | First customers wallet-aligned |
 
-CAISO + PJM follow in Q4. Europe (ENTSO-E) + commodities (gas, refined products) in 2027.
+Adjacent grids follow in Q4 (CAISO, PJM). Europe + Asia + commodities (gas, refined products) in 2027.
 
 ---
 
