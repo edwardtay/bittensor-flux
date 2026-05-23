@@ -65,6 +65,24 @@
   .qa-block .q { font-weight: 600; color: var(--brand); margin: 0 0 6px; }
   .qa-block .a { color: var(--fg-2); margin: 0; font-size: 0.95em; }
   .nav-back { color: var(--brand-2); font-size: 0.9em; }
+  .lang-tabs { display: flex; gap: 4px; margin: 8px 0 28px; border-bottom: 1px solid var(--border); }
+  .lang-tab {
+    padding: 10px 18px;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    font: inherit;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .lang-tab:hover { color: var(--brand); }
+  .lang-tab.active { color: var(--brand); border-bottom-color: var(--brand); }
+  .lang-panel { display: none; }
+  .lang-panel.active { display: block; }
+  .zh p, .zh h2 { font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Inter', sans-serif; }
+  .zh p { line-height: 1.85; }
 </style>
 </head>
 <body>
@@ -85,6 +103,13 @@
 <h3>Pacing</h3>
 <p>16 slides, target 480 seconds. Land at 7:45 with 15 seconds for the close.</p>
 </div>
+
+<div class="lang-tabs">
+  <button class="lang-tab active" onclick="switchLang('en')">English</button>
+  <button class="lang-tab" onclick="switchLang('zh')">中文</button>
+</div>
+
+<div id="lang-en" class="lang-panel active">
 
 <h2><span class="time">0:00 to 0:20</span><span><span class="slide-num">1</span>Title</span><span class="duration">20s</span></h2>
 <p><strong>Flux is a marketplace for energy forecasts, built on Bittensor.</strong></p>
@@ -158,6 +183,94 @@
 
 <h2><span class="time">7:55 to 8:00</span><span><span class="slide-num">17</span>Close</span><span class="duration">5s</span></h2>
 <p><strong>Flux. Real-time energy intelligence. Native to Bittensor. Thank you.</strong></p>
+
+</div><!-- /lang-en -->
+
+<div id="lang-zh" class="lang-panel zh">
+
+<h2><span class="time">0:00 至 0:20</span><span><span class="slide-num">1</span>开场</span><span class="duration">20秒</span></h2>
+<p><strong>Flux 是一个基于 Bittensor 构建的能源预测市场。</strong></p>
+<p>多个模型相互竞争。一个无可争议的真相来源。</p>
+
+<h2><span class="time">0:20 至 1:20</span><span><span class="slide-num">2</span>能源正成为世界的焦点</span><span class="duration">60秒</span></h2>
+<p>到 2030 年,数据中心的用电量将超过整个日本。</p>
+<p>这是国际能源署的预测。<strong>五年翻一倍。</strong>从 415 太瓦时增长到 945 太瓦时。</p>
+<p>而且不只是人工智能。全球电力需求每年增长接近 4%,持续到 2027 年。电动汽车、工业电气化、制冷负荷,所有需求同时叠加。</p>
+
+<h2><span class="time">1:20 至 2:05</span><span><span class="slide-num">3</span>地缘政治重塑电网</span><span class="duration">45秒</span></h2>
+<p>这是需求端。供给端是另一半,而供给穿过一个个咽喉要道。</p>
+<p>霍尔木兹海峡。俄乌局势。红海航运。巴拿马运河干旱。气候极端事件。每一个都可能在几天内重塑全球电力市场。</p>
+<p><strong>需求爆炸式增长。供给极其脆弱。价格以分钟为单位波动。</strong></p>
+
+<h2><span class="time">2:05 至 2:35</span><span><span class="slide-num">4</span>但预测还停留在过去</span><span class="duration">30秒</span></h2>
+<p>然而今天的能源情报,来自少数几家咨询公司。</p>
+<p><strong>一家公司,一个模型,一种观点。季度报告。一个席位三十万美元。</strong></p>
+<p>市场每五分钟变动一次。交易员却在盲飞。</p>
+
+<h2><span class="time">2:35 至 3:20</span><span><span class="slide-num">5</span>Flux 是什么</span><span class="duration">45秒</span></h2>
+<p>Flux 是一个能源预测市场。</p>
+<p><strong>任何人都可以提交预测。量化研究员。学者。大学。</strong>公开的电网数据自动判定谁对谁错。客户购买排名最高的输出。网络在链上奖励赢家。</p>
+<p>没有单一供应商。没有专有黑盒。没有季度延迟。</p>
+
+<h2><span class="time">3:20 至 4:05</span><span><span class="slide-num">6</span>客户是谁</span><span class="duration">45秒</span></h2>
+<p>三个客户层级。加密原生量化基金,每年六万美元。交易部门,每年三十万美元。企业级公用事业和数据中心运营商,每年一百二十万美元以上。</p>
+<p><strong>三年目标:验证者层面年度经常性收入达到 1500 万到 3000 万美元。</strong></p>
+<p>我们的切入点是加密原生的能源交易团队。他们已经信任 Bittensor。他们已经交易德州电力市场。彭博和 Modo 都服务不到他们。这个切入点能支撑我们前 18 个月。</p>
+
+<h2><span class="time">4:05 至 4:35</span><span><span class="slide-num">7</span>为什么 Bittensor 是正确选择</span><span class="duration">30秒</span></h2>
+<p>每一个去中心化 AI 子网都面临同一个难题:<strong>由谁来决定谁是对的?</strong></p>
+<p>Flux 的答案是:电网。德州电网运营商公布实际成交价格。你的预测要么吻合,要么不吻合。公开数据。确定性。终局。</p>
+
+<h2><span class="time">4:35 至 5:05</span><span><span class="slide-num">8</span>第一版 — 日前电价</span><span class="duration">30秒</span></h2>
+<p>我们从一个市场开始。德州日前批发电价。</p>
+<p>今天 94 吉瓦。<strong>2030 年高情景 208 吉瓦。</strong>这是官方预测。</p>
+<p>数据完全开放。美国最高的价格波动率。公开基准很弱,首个 20% 的提升很容易实现。而且加密原生交易员已经在这个市场里。</p>
+
+<h2><span class="time">5:05 至 5:35</span><span><span class="slide-num">9</span>矿工做什么</span><span class="duration">30秒</span></h2>
+<p>矿工提交概率预测,覆盖四个时间维度:五分钟、一小时、二十四小时、一周。</p>
+<p>预测在提交窗口打开前用加密哈希封存。<strong>没有任何矿工能在提交之前抄袭别人。</strong></p>
+<p>参考模型是基于公开数据的梯度提升树。可以分叉、改进、竞争。</p>
+
+<h2><span class="time">5:35 至 6:05</span><span><span class="slide-num">10</span>验证者做什么</span><span class="duration">30秒</span></h2>
+<p>每 72 分钟,验证者从德州电网的公开数据接口拉取实际价格。</p>
+<p>每个矿工按三个信号打分:<strong>技能、校准度、跨时域广度。</strong></p>
+<p>他们在链上承诺并揭示权重,然后向企业客户提供最优预测。每个客户每月 5000 到 10 万美元。</p>
+
+<h2><span class="time">6:05 至 6:20</span><span><span class="slide-num">11</span>一轮打分长什么样</span><span class="duration">15秒</span></h2>
+<p>这是一轮打分的样子。四个矿工。三个信号。最强的量化得分 0.74。低于朴素基准的<strong>自动归零</strong>。</p>
+<p>全程无人工干预。</p>
+
+<h2><span class="time">6:20 至 6:55</span><span><span class="slide-num">12</span>八种攻击,八种防御</span><span class="duration">35秒</span></h2>
+<p>大多数子网就死在这里。权重复制。预测复制。验证者勾结。单矿工拉抬。基准博弈。女巫攻击。债券震荡。还有最致命的:<strong>Taoflow 机制下的流出死亡螺旋</strong>。</p>
+<p>每一种攻击都对应一个具体的超参数或资本承诺。任何环节都不依赖人工判断。</p>
+
+<h2><span class="time">6:55 至 7:10</span><span><span class="slide-num">13</span>系统闭环</span><span class="duration">15秒</span></h2>
+<p>完整闭环。更好的预测带来更多企业客户收入,带来更大的代币释放,吸引更好的预测者。</p>
+
+<h2><span class="time">7:10 至 7:25</span><span><span class="slide-num">14</span>当前进度</span><span class="duration">15秒</span></h2>
+<p>机制规范已冻结。提案、演示文稿、网站均已发布。代码仓库在 GitHub 公开。</p>
+<p>下一步:参考矿工实现,回测,第三季度完成子网注册。</p>
+
+<h2><span class="time">7:25 至 7:40</span><span><span class="slide-num">15</span>路线图</span><span class="duration">15秒</span></h2>
+<p>第三季度,子网上线。第四季度,加州和中大西洋电网接入,首个每月一万美元的企业客户。明年第一季度,通过欧洲电网运营商进入欧洲。<strong>2027 年第一季度月度经常性收入达到 100 万美元。</strong></p>
+
+<h2><span class="time">7:40 至 7:55</span><span><span class="slide-num">16</span>竞争格局</span><span class="duration">15秒</span></h2>
+<p>这是竞争地图。彭博和 Modo 卖季度报告。Enverus 和 Yes Energy 提供实时数据但是单一供应商。</p>
+<p><strong>Flux 是唯一一个同时具备"多个独立模型"和"基于公开电网数据实时打分"的象限。</strong></p>
+
+<h2><span class="time">7:55 至 8:00</span><span><span class="slide-num">17</span>收尾</span><span class="duration">5秒</span></h2>
+<p><strong>Flux。实时能源情报。原生于 Bittensor。谢谢。</strong></p>
+
+</div><!-- /lang-zh -->
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.lang-panel').forEach(p => p.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('lang-' + lang).classList.add('active');
+}
+</script>
 
 <hr>
 

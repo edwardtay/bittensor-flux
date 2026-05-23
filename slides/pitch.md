@@ -234,11 +234,13 @@ A market for forecasts. Many competing models. One unarguable source of truth.
 
 ---
 
-## AI is the largest energy story of our lifetime
+## Energy is becoming the world's focus
 
-<div class="kicker">The setup</div>
+<div class="kicker">The problem</div>
 
 <p class="huge">By 2030, data centers will use<br>more electricity than Japan.</p>
+
+<p style="font-size:1.05em; color:#555; margin-top:-4px;">AI is the largest energy story of our lifetime. Demand is exploding. Supply is fragile. <strong style="color:#0a4d68;">Whoever sees the next price first wins.</strong></p>
 
 <div class="cols" style="grid-template-columns: 1.4fr 1fr; align-items: center;">
 <div>
