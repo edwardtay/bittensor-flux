@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Flux — 8min pitch script</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfbfa;
+    --surface: #ffffff;
+    --border: #e4e4e0;
+    --fg: #1a1a1a;
+    --fg-2: #555;
+    --muted: #888;
+    --brand: #0a4d68;
+    --brand-2: #088395;
+    --accent: #c43d3d;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); }
+  body {
+    font: 15.5px/1.65 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--fg);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 60px 24px 100px; }
+  .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 36px; padding-bottom: 18px; border-bottom: 1px solid var(--border); }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-mark { width: 32px; height: 32px; border-radius: 7px; background: var(--brand); display: grid; place-items: center; }
+  .logo-mark svg { width: 18px; height: 18px; }
+  .brand-name { font-weight: 700; color: var(--brand); letter-spacing: -0.01em; }
+  .label-private { font-size: 0.75em; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; color: var(--accent); padding: 4px 10px; border: 1px solid var(--accent); border-radius: 4px; }
+  h1 { font-size: 2em; font-weight: 700; color: var(--brand); letter-spacing: -0.02em; margin: 0 0 6px; }
+  .sub { color: var(--fg-2); margin: 0 0 36px; font-size: 1.05em; }
+  h2 { font-size: 1.1em; color: var(--brand); font-weight: 600; margin: 28px 0 6px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; align-items: baseline; gap: 14px; }
+  h2 .time { color: var(--brand-2); font-family: 'JetBrains Mono', monospace; font-size: 0.85em; font-weight: 500; letter-spacing: 0.02em; }
+  h2 .duration { color: var(--muted); font-size: 0.7em; font-weight: 400; margin-left: auto; }
+  .slide-num { display: inline-block; background: var(--brand); color: white; width: 22px; height: 22px; border-radius: 50%; text-align: center; line-height: 22px; font-size: 0.75em; font-weight: 700; margin-right: 8px; vertical-align: 2px; }
+  p { margin: 8px 0; }
+  .speak { color: var(--fg); }
+  .speak strong { color: var(--brand); font-weight: 700; }
+  .cue { color: var(--fg-2); font-size: 0.9em; font-style: italic; margin-top: 4px; padding-left: 14px; border-left: 2px solid var(--brand-2); }
+  .pause { color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 3px 0; }
+  .summary {
+    background: white;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--brand);
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+  .summary h3 { margin: 0 0 8px; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand); font-weight: 600; }
+  .summary p { margin: 4px 0; font-size: 0.95em; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+  .qa-block { background: white; border: 1px solid var(--border); border-radius: 6px; padding: 18px 22px; margin: 14px 0; }
+  .qa-block .q { font-weight: 600; color: var(--brand); margin: 0 0 6px; }
+  .qa-block .a { color: var(--fg-2); margin: 0; font-size: 0.95em; }
+  code { font-family: 'JetBrains Mono', monospace; background: #ecefe8; color: var(--brand); padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+  .nav-back { color: var(--brand-2); font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top">
+  <div class="logo">
+    <div class="logo-mark"><svg viewBox="0 0 64 64"><path d="M36 10L18 36h12l-3 18 18-26H33l3-18z" fill="#88c5d4"/></svg></div>
+    <span class="brand-name">Flux</span>
+  </div>
+  <span class="label-private">Private · Speaker notes</span>
+</div>
+
+<h1>The 8-minute pitch</h1>
+<p class="sub">Time-coded script per slide. Read the <span class="speak">spoken text</span>; check the <span style="color:#555; font-style:italic;">italicized cues</span> for body language and emphasis.</p>
+
+<div class="summary">
+<h3>Pacing budget</h3>
+<p>16 slides · 480 seconds total · ~30s average · weight hook slides (1–5) heavier, mechanism slides (8–13) lighter. Aim to finish at <strong>7:45</strong> leaving 15s for the last beat to land.</p>
+</div>
+
+<h2><span class="time">0:00–0:25</span><span><span class="slide-num">1</span>Title</span><span class="duration">25s</span></h2>
+<p class="speak"><strong>"Hi. I'm Edward. I'm here to show you Flux — a marketplace for energy forecasts, built on Bittensor."</strong></p>
+<p class="speak">"In 8 minutes you'll know exactly what we're building, who's paying for it, and why nobody else can build it the way we do."</p>
+<p class="cue">Stand still. Slow down. The room should hear "marketplace · energy forecasts · Bittensor" — that's the one-line memory.</p>
+
+<h2><span class="time">0:25–1:25</span><span><span class="slide-num">2</span>AI is the largest energy story of our lifetime</span><span class="duration">60s</span></h2>
+<p class="speak">"By 2030, data centers will use more electricity than Japan. Look at this chart — the IEA's projection. We're going from 415 terawatt-hours in 2024 to 945 by 2030. That's <strong>doubling in five years</strong>."</p>
+<p class="speak">"And it's not just AI. Global power demand is growing close to 4% every year through 2027. EVs, electrified industry, cooling load — all compounding at once."</p>
+<p class="cue">Point at the 2030 bar. Pause. Let the chart do the work. The audience already believes AI is huge — you're just connecting it to power.</p>
+
+<h2><span class="time">1:25–2:10</span><span><span class="slide-num">3</span>Geopolitics rewires the grid</span><span class="duration">45s</span></h2>
+<p class="speak">"That's the demand side. Supply is the other half — and supply runs through chokepoints."</p>
+<p class="speak">"Hormuz. Russia–Ukraine. Red Sea. Taiwan. Climate volatility. Every one of these can reshape global power markets <strong>in days</strong>."</p>
+<p class="speak">"Demand is exploding. Supply is fragile. Prices move in minutes."</p>
+<p class="cue">Look up from the slide. Say "in minutes" with weight. This is where the urgency lives.</p>
+
+<h2><span class="time">2:10–2:40</span><span><span class="slide-num">4</span>Forecasts are stuck in the past</span><span class="duration">30s</span></h2>
+<p class="speak">"Yet today's energy intelligence comes from a handful of consulting firms. <strong>One firm, one model, one opinion. PDFs. Quarterly. $300k a seat.</strong>"</p>
+<p class="speak">"The market moves every 5 minutes. Traders are flying blind."</p>
+<p class="cue">Snap-cadence. Three short stabs: "one firm — one model — one opinion." Hand gesture: one finger, one finger, one finger.</p>
+
+<h2><span class="time">2:40–3:25</span><span><span class="slide-num">5</span>That's what Flux is</span><span class="duration">45s</span></h2>
+<p class="speak">"Flux is a marketplace for energy forecasts."</p>
+<p class="speak"><strong>"Anyone can submit a forecast — quants, researchers, universities.</strong> Public grid data resolves who was right, automatically. Customers buy the top-ranked outputs. The network rewards winners on-chain."</p>
+<p class="speak">"No single vendor. No proprietary black box. No quarterly delay."</p>
+<p class="cue">Read the four cards left-to-right, top-to-bottom. Quick, rhythmic. The audience should feel the symmetry.</p>
+
+<h2><span class="time">3:25–4:10</span><span><span class="slide-num">6</span>Who pays</span><span class="duration">45s</span></h2>
+<p class="speak">"Three customer tiers. Crypto-quant funds — $60k a year. Trading desks — $300k. Enterprise utilities and data center operators — $1.2 million plus."</p>
+<p class="speak">"Three-year ARR target: <strong>$15 to $30 million</strong> across validators."</p>
+<p class="speak">"Our wedge is crypto-native energy desks. They already trust Bittensor. They already trade ERCOT. They're underserved by Bloomberg and Modo. That wedge alone funds the first 18 months."</p>
+<p class="cue">This is the slide investors care about. Slow down on the dollar numbers. Make eye contact.</p>
+
+<h2><span class="time">4:10–4:40</span><span><span class="slide-num">7</span>Why this works on Bittensor</span><span class="duration">30s</span></h2>
+<p class="speak">"Every decentralized AI subnet struggles with one question: <strong>who decides who's right?</strong>"</p>
+<p class="speak">"Flux's answer is: the grid does. ERCOT publishes the realized price. Your forecast matched, or it didn't. Public data. Deterministic. Final."</p>
+<p class="cue">This is the intellectual core of the pitch. Say it slowly. Bittensor judges will lock onto this.</p>
+
+<h2><span class="time">4:40–5:10</span><span><span class="slide-num">8</span>v1 — day-ahead power prices</span><span class="duration">30s</span></h2>
+<p class="speak">"We start with one market. ERCOT day-ahead power. 94 gigawatts today. <strong>208 gigawatts by 2030</strong> in the official high case."</p>
+<p class="speak">"Open data. Highest volatility in the US. Weak public baseline — easy first 20% beat. And crypto-native traders are already there."</p>
+<p class="cue">Trace the line on the chart with your finger if possible. The doubling slope is the story.</p>
+
+<h2><span class="time">5:10–5:40</span><span><span class="slide-num">9</span>What miners do</span><span class="duration">30s</span></h2>
+<p class="speak">"Miners submit probabilistic forecasts across four horizons — 5 minutes, 1 hour, 24 hours, 1 week ahead."</p>
+<p class="speak">"Forecasts are sealed cryptographically before each window opens. <strong>No miner can copy another before submitting.</strong> The reference model is XGBoost on public data — fork it, improve it, compete."</p>
+<p class="cue">Don't dwell. The audience trusts you have a model.</p>
+
+<h2><span class="time">5:40–6:10</span><span><span class="slide-num">10</span>What validators do</span><span class="duration">30s</span></h2>
+<p class="speak">"Every 72 minutes, validators pull realized prices from ERCOT's public API and score every miner on three signals: <strong>skill, calibration, and breadth across horizons</strong>."</p>
+<p class="speak">"They commit-reveal their weights on-chain. Then they serve the best forecasts via enterprise API. <strong>$5k to $100k per month per customer.</strong>"</p>
+<p class="cue">Three signals — show three fingers. Then point at the API revenue line.</p>
+
+<h2><span class="time">6:10–6:25</span><span><span class="slide-num">11</span>A real scoring round</span><span class="duration">15s</span></h2>
+<p class="speak">"Here's what one round actually looks like. Four miners. Three signals. The top quant scores 0.74. The one below the naive baseline gets <strong>zeroed automatically</strong>. No humans involved."</p>
+<p class="cue">Point at uid 2 — the zeroed row. That's the headline.</p>
+
+<h2><span class="time">6:25–7:00</span><span><span class="slide-num">12</span>Eight attacks, eight defenses</span><span class="duration">35s</span></h2>
+<p class="speak">"This is where most subnets break. Weight copying. Forecast copying. Validator cabals. Single-miner pumps. Baseline gaming. Sybil floods. Bond whipsaw. And the existential one — <strong>flow-emission spirals under Taoflow</strong>."</p>
+<p class="speak">"Every attack maps to one specific hyperparameter or capital commitment. No human dependency anywhere. We've thought through all of them."</p>
+<p class="cue">Don't read the table line by line. Skim names. The slide does the work. Land on "no human dependency anywhere."</p>
+
+<h2><span class="time">7:00–7:15</span><span><span class="slide-num">13</span>How the system fits together</span><span class="duration">15s</span></h2>
+<p class="speak">"Closed loop. Better forecasts mean more API revenue, which means larger emissions, which attracts better forecasters."</p>
+<p class="cue">Trace the loop with your hand. Move on quickly.</p>
+
+<h2><span class="time">7:15–7:30</span><span><span class="slide-num">14</span>Subnet creation</span><span class="duration">15s</span></h2>
+<p class="speak">"Spec is frozen. Yuma v3. Taoflow, November 2025. Every parameter on this slide defends a named attack from the slide before."</p>
+<p class="cue">Don't read the bash. The slide is proof you know the chain interface — let it sit.</p>
+
+<h2><span class="time">7:30–7:55</span><span><span class="slide-num">15</span>Why Flux vs Modo</span><span class="duration">25s</span></h2>
+<p class="speak">"Our main competitor is Modo Energy. £25 million Series B, last December. Smart team."</p>
+<p class="speak">"But Modo sells one proprietary model, quarterly valuations, electrification assets only. <strong>Flux is many competing models, live forecasts every 72 minutes, all energy commodities.</strong>"</p>
+<p class="speak">"They sell the past. We sell the next 72 minutes."</p>
+<p class="cue">"They sell the past. We sell the next 72 minutes." — this is the closer. Slow. Eye contact. Pause.</p>
+
+<h2><span class="time">7:55–8:00</span><span><span class="slide-num">16</span>Close</span><span class="duration">5s</span></h2>
+<p class="speak"><strong>"Flux. Real-time energy intelligence, Bittensor-native. Thank you."</strong></p>
+<p class="cue">Stop. Don't fill. Wait for questions.</p>
+
+<hr>
+
+<h2 style="border-top:0; padding-top:0;">Likely Q&amp;A · prep these answers</h2>
+
+<div class="qa-block">
+<p class="q">Q: How do you actually compete with Modo when they have $30M in the bank?</p>
+<p class="a">A: We're not competing for the same customer. Modo sells project-finance bankability — quarterly. We sell trading-floor operational forecasts — real-time. Adjacent markets. If Modo expands into real-time within 24 months, our network effect from open competition is the moat — they can't match the diversity of hundreds of independent quants with one in-house team.</p>
+</div>
+
+<div class="qa-block">
+<p class="q">Q: What happens if Bittensor's economics change again?</p>
+<p class="a">A: We've designed for Taoflow's flow-based emission risk. $1M owner pre-fund plus 20% API revenue redirect during low-emission periods. Stickier with 6-month staker incentives. Subnet survives a quarter of negative flow without miner exodus.</p>
+</div>
+
+<div class="qa-block">
+<p class="q">Q: Why would energy traders trust a Bittensor subnet?</p>
+<p class="a">A: They won't, day one. Our first 20 customers are crypto-native energy desks — they already trust both sides. That funds 18 months. By month 24, we have a track record traders can audit on-chain.</p>
+</div>
+
+<div class="qa-block">
+<p class="q">Q: What if miners can't beat the naive baseline?</p>
+<p class="a">A: Then the mechanism is wrong and we kill it. This is one of our three six-month gate tests. We test before launch on 30 days of ERCOT data. If competitive miners can't beat yesterday+seasonal by 20%, we don't ship.</p>
+</div>
+
+<div class="qa-block">
+<p class="q">Q: Why ERCOT first and not CAISO or PJM?</p>
+<p class="a">A: Three reasons. Highest LMP volatility in the US, so biggest forecast value. Fully open data API, so validators score for free. And it's the grid with the biggest AI-data-center repricing story — the narrative that closes meetings.</p>
+</div>
+
+<div class="qa-block">
+<p class="q">Q: How big can this actually get?</p>
+<p class="a">A: Realistically, $50–150M enterprise value over 5 years. Not a unicorn play. The ceiling is real — 256 UID cap, single-vertical, Modo will eventually expand. But it's a real $15–30M ARR business that compounds.</p>
+</div>
+
+<hr>
+
+<p style="color:var(--muted); font-size:0.85em; margin-top:30px;">Last updated 2026-05-23 · <a href="../" class="nav-back">← Back to landing</a></p>
+
+</div>
+</body>
+</html>

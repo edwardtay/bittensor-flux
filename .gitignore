@@ -1,6 +1,6 @@
 CLAUDE.md
 NOTES.md
-notes/
+/notes/
 .claude/
 .env
 .env.*
