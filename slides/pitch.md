@@ -238,7 +238,7 @@ A market for forecasts. Many competing models. One unarguable source of truth.
 
 <div class="kicker">The setup</div>
 
-<p class="huge">By 2030, AI data centers will use<br>more electricity than Japan.</p>
+<p class="huge">By 2030, data centers will use<br>more electricity than Japan.</p>
 
 <div class="cols" style="grid-template-columns: 1.4fr 1fr; align-items: center;">
 <div>
@@ -304,17 +304,55 @@ A market for forecasts. Many competing models. One unarguable source of truth.
 <div class="card">
 <div class="label"><svg class="icon" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>Data-center load</div>
 <div class="value">2×</div>
-<div class="note">by 2030</div>
+<div class="note">by 2030 (IEA)</div>
 </div>
-<div class="card" style="margin-top:10px;">
+<div class="card" style="margin-top:8px;">
 <div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>Global power demand</div>
-<div class="value">+4% / yr</div>
+<div class="value">~4% / yr</div>
 <div class="note">through 2027 (IEA)</div>
+</div>
+<div class="card" style="margin-top:8px; border-left-color:#c43d3d;">
+<div class="label" style="color:#c43d3d;"><svg class="icon" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Supply shocks</div>
+<div class="value" style="color:#c43d3d; font-size:1.1em;">Hormuz · Ukraine · LNG</div>
+<div class="note">Geopolitics rewires energy flows in days</div>
 </div>
 </div>
 </div>
 
-> See the next price first. Win. Miss it. Go bankrupt.
+> Demand is exploding. Supply is fragile. Prices move in minutes. **See it first or go bankrupt.**
+
+---
+
+## Geopolitics rewires the grid
+
+<div class="kicker">The other half</div>
+
+Demand is one side. Supply is the other — and supply runs through chokepoints.
+
+<div class="cols">
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19c4-3 12-3 16 0"/><path d="M4 13c4-3 12-3 16 0"/><path d="M4 7c4-3 12-3 16 0"/></svg>Strait of Hormuz</div>
+<strong>20% of world's oil. 20% of LNG.</strong>
+<div class="note">Iran tensions → freight rates 3× in 48h. Power-gas spreads blow out.</div>
+</div>
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>Russia–Ukraine</div>
+<strong>European gas permanently restructured.</strong>
+<div class="note">Pipeline → LNG cargo. Every disruption ripples to ERCOT and CAISO via global gas pricing.</div>
+</div>
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Red Sea · Taiwan · Panama</div>
+<strong>Shipping chokepoints multiply.</strong>
+<div class="note">Houthi attacks reroute LNG carriers. Drought slows Panama. China–Taiwan tensions sit over LNG flows.</div>
+</div>
+<div class="card">
+<div class="label"><svg class="icon" viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>Climate volatility</div>
+<strong>Extreme weather hits weekly.</strong>
+<div class="note">Texas freeze 2021 = $130B economic damage. Each event = forecast-value spike.</div>
+</div>
+</div>
+
+> Quarterly PDFs cannot price a world that resets every week.
 
 ---
 
@@ -374,6 +412,35 @@ A **marketplace for energy forecasts** built on Bittensor.
 <div class="note">Bittensor emissions enforce the ranking on-chain.</div>
 </div>
 </div>
+
+---
+
+## Who pays
+
+<div class="cols-3">
+<div class="card-dark">
+<div class="label">Crypto-quant</div>
+<div class="value" style="font-size:1.4em;">$60k</div>
+<span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
+<div class="note" style="color:#a8c8d8; margin-top:8px;">On-chain energy desks · RWA protocols · crypto-native funds</div>
+</div>
+<div class="card-dark">
+<div class="label">Trading desk</div>
+<div class="value" style="font-size:1.4em;">$300k</div>
+<span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
+<div class="note" style="color:#a8c8d8; margin-top:8px;">Mid-tier ERCOT/CAISO traders · NA + EU</div>
+</div>
+<div class="card-dark">
+<div class="label">Enterprise</div>
+<div class="value" style="font-size:1.4em;">$1.2M+</div>
+<span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
+<div class="note" style="color:#a8c8d8; margin-top:8px;">Utilities · IPPs · data-center operators</div>
+</div>
+</div>
+
+<p class="big" style="text-align:center; margin-top:0.6em;">Three-year ARR target: $15–30M</p>
+
+<div class="sub" style="text-align:center;">Wedge: crypto-native energy desks underserved by Bloomberg (too expensive) and Modo (valuation-focused). Funds the first 18 months alone.</div>
 
 ---
 
@@ -473,7 +540,7 @@ One market. One product. Prove the mechanism. Start with the grid doubling faste
 </div>
 <div>
 <div class="card-dark">
-<div class="label">Today</div>
+<div class="label">2025 forecast</div>
 <div class="value">94 GW</div>
 </div>
 <div class="card-dark" style="margin-top:10px;">
@@ -644,35 +711,6 @@ Better forecasts → more API revenue → larger emissions → better forecasts.
 Public grid data. No human DAO. No LLM judge. No off-chain attestation.
 </div>
 </div>
-
----
-
-## Who pays
-
-<div class="cols-3">
-<div class="card-dark">
-<div class="label">Crypto-quant</div>
-<div class="value" style="font-size:1.4em;">$60k</div>
-<span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
-<div class="note" style="color:#a8c8d8; margin-top:8px;">On-chain energy desks · RWA protocols · crypto-native funds</div>
-</div>
-<div class="card-dark">
-<div class="label">Trading desk</div>
-<div class="value" style="font-size:1.4em;">$300k</div>
-<span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
-<div class="note" style="color:#a8c8d8; margin-top:8px;">Mid-tier ERCOT/CAISO traders · NA + EU</div>
-</div>
-<div class="card-dark">
-<div class="label">Enterprise</div>
-<div class="value" style="font-size:1.4em;">$1.2M+</div>
-<span class="pill" style="background:#88c5d4;color:#0a4d68;">/ year</span>
-<div class="note" style="color:#a8c8d8; margin-top:8px;">Utilities · IPPs · data-center operators</div>
-</div>
-</div>
-
-<p class="big" style="text-align:center; margin-top:0.6em;">Three-year ARR target: $15–30M</p>
-
-<div class="sub" style="text-align:center;">First-customer wedge: crypto-native energy desks underserved by Bloomberg (too expensive) and Modo (valuation-focused). This wedge alone funds the first 18 months.</div>
 
 ---
 
